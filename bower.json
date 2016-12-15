@@ -1,0 +1,16 @@
+{
+  "name": "pp-interactive-map",
+  "description": "Interactive map of Poznan University of Technology.",
+  "authors": [
+    "Mateusz Stempniewicz <mateusz.stempniewicz@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/akai-org/map",
+  "dependencies": {
+    "requirejs": "^2.1.22",
+    "jquery": "~2.2.4",
+    "jquery-ui": "~1.11.4",
+    "angular": "~1.6.0",
+    "angular-ui-router": "^0.3.1"
+  }
+}
