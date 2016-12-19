@@ -8,13 +8,6 @@ require(['./landing/landingModule',
                                                                  'map-module',
                                                                  'ui.router']);
 
-  // interactiveMapApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-  //   $stateProvider
-  //       .state({
-  //
-  //       })
-  // }]);
-
   interactiveMapApp.run(['$rootScope', '$state', function($rootScope, $state) {
     $rootScope.title = 'Interaktywna mapa Politechniki Poznańskiej';
   }]);

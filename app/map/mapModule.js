@@ -11,7 +11,7 @@ define(['./mapCtrl'],
           .state('map', {
             url: '/map',
             controller: 'MapCtrl',
-            templateUrl: 'map/map.html'
+            templateUrl: 'html/map/map.html'
           });
      }]);
 

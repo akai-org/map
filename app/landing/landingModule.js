@@ -11,7 +11,7 @@ define(['./LandingPageCtrl'],
       .state('landing', {
         url: '',
         controller: 'LandingPageCtrl',
-        templateUrl: 'landing/landing.html'
+        templateUrl: 'html/landing/landing.html'
       });
   }]);
 
