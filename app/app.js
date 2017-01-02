@@ -2,10 +2,12 @@ require(['./landing/landingModule',
     './map/mapModule',
     './buildings/buildingsModule'],
   function (landingModule,
-            mapModule) {
+            mapModule,
+            buildingsModule) {
     'use strict';
 
-    var interactiveMapApp = angular.module('interactive-map-app', ['landing-module',
+    var interactiveMapApp = angular.module('interactive-map-app', [
+      'landing-module',
       'map-module',
       'buildings-module',
       'ui.router']);
