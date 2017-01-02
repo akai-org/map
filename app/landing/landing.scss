@@ -1,11 +1,27 @@
-.container {
-  width: 400px;
-  margin: 50px auto;
-}
+.landing {
+  &--container {
 
-.btn-test {
-  display: inline-block;
-  margin-top: 10px;
-  background-color: lightgrey;
-  border-radius: 10px;
+  }
+
+  &--title {
+
+  }
+
+  &--searchbox {
+    &--input {
+
+    }
+
+    &--button {
+
+    }
+  }
+
+  &--links {
+
+  }
+
+  &--link {
+
+  }
 }
