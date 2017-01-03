@@ -7,7 +7,9 @@
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
   <title>Interaktywna mapa Politechniki Poznańskiej</title>
 </head>
-<body>
+<body ng-controller="AppCtrl">
+  <div ng-include="'partials/sideNav.html'"></div>
+
   <div ui-view></div>
 
   <script type="text/javascript" src="js/lib/jquery.min.js"></script>
