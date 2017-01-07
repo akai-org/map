@@ -1,7 +1,10 @@
-require(['./landing/landingModule',
+require([
+    './AppCtrl',
+    './landing/landingModule',
     './map/mapModule',
     './buildings/buildingsModule'],
-  function (landingModule,
+  function (AppCtrl,
+            landingModule,
             mapModule,
             buildingsModule) {
     'use strict';
@@ -12,16 +15,12 @@ require(['./landing/landingModule',
       'buildings-module',
       'ui.router']);
 
-    // interactiveMapApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-    //   $stateProvider
-    //       .state({
-    //
-    //       })
-    // }]);
 
     interactiveMapApp.run(['$rootScope', '$state', function ($rootScope, $state) {
       $rootScope.title = 'Interaktywna mapa Politechniki Poznańskiej';
     }]);
+
+    interactiveMapApp.controller('AppCtrl', ['$scope', AppCtrl]);
 
     angular.bootstrap(document, ['interactive-map-app']);
 
