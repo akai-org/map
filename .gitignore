@@ -39,3 +39,10 @@ jspm_packages
 .idea
 bower_components
 build
+
+!/app
+!/gulp
+!/package.json
+!/gulpfile.js
+!/bower.json
+!/.gitignore
