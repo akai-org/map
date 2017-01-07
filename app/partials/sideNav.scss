@@ -10,8 +10,15 @@
 
 
   &--close-icon {
+    font-family: "FontAwesome";
+    font-size: 24px;
     text-decoration: none;
     float: right;
+    color: #515151;
+
+    &:after {
+      content: "\f00d";
+    }
   }
 
   &--link {
@@ -19,10 +26,23 @@
     color: #515151;
     margin: 20px 0;
     display: block;
-    font-size: 16px;
+    font-size: 14px;
 
-    &.active {
+    &.active:before {
+      content:'\00B7';
+      font-size: 60px;
+      padding-right: 5px;
+      color: #328cfa;
 
+      content: '\00B7';
+      font-size: 60px;
+      line-height: 39px;
+      color: #328cfa;
+      margin-top: 0px;
+      margin-left: -20px;
+      display: block;
+      position: relative;
+      height: 10px;
     }
   }
 
@@ -30,11 +50,15 @@
     color: #cfcfcf;
     font-size: 12px;
     text-transform: uppercase;
-    margin: 20px 0;
+    margin: 40px 0 10px;
   }
 
-  &--section-header {
-
+  &--social-icon {
+    // TODO: mixin
+    font-family: "FontAwesome";
+    font-size: 32px;
+    text-decoration: none;
+    color: #3c5a96;
   }
 
 }
