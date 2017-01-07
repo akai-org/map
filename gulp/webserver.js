@@ -27,5 +27,5 @@ gulp.task('webserver', function(callback) {
 });
 
 gulp.task('webserver:prod', function(callback) {
-  runSequence('build:dev', 'connect', callback);
+  runSequence('build:dev', 'connect:prod', callback);
 });
