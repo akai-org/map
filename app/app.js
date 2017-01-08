@@ -1,25 +1,28 @@
-require(['./landing/landingModule',
-         './map/mapModule'],
-         function(landingModule,
-                  mapModule) {
-  'use strict';
+require([
+    './AppCtrl',
+    './landing/landingModule',
+    './map/mapModule',
+    './buildings/buildingsModule'],
+  function (AppCtrl,
+            landingModule,
+            mapModule,
+            buildingsModule) {
+    'use strict';
 
-  var interactiveMapApp = angular.module('interactive-map-app', ['landing-module',
-                                                                 'map-module',
-                                                                 'ui.router']);
+    var interactiveMapApp = angular.module('interactive-map-app', [
+      'landing-module',
+      'map-module',
+      'buildings-module',
+      'ui.router']);
 
-  // interactiveMapApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-  //   $stateProvider
-  //       .state({
-  //
-  //       })
-  // }]);
 
-  interactiveMapApp.run(['$rootScope', '$state', function($rootScope, $state) {
-    $rootScope.title = 'Interaktywna mapa Politechniki Poznańskiej';
-  }]);
+    interactiveMapApp.run(['$rootScope', '$state', function ($rootScope, $state) {
+      $rootScope.title = 'Interaktywna mapa Politechniki Poznańskiej';
+    }]);
 
-  angular.bootstrap(document, ['interactive-map-app']);
+    interactiveMapApp.controller('AppCtrl', ['$scope', AppCtrl]);
 
-  return interactiveMapApp;
-});
+    angular.bootstrap(document, ['interactive-map-app']);
+
+    return interactiveMapApp;
+  });

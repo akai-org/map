@@ -11,6 +11,7 @@
   "bugs": {
     "url": "https://github.com/akai-org/map/issues"
   },
+  "scripts": {"start": "npm install; npm install -g gulp; npm install -g bower; npm install -g http-server; gulp build:dev; http-server ./build"},
   "homepage": "https://github.com/akai-org/map#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
