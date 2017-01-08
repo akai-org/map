@@ -2,7 +2,8 @@ define(['./mapCtrl'],
         function(MapCtrl) {
     'use strict';
 
-     var mapModule = angular.module('map-module', ['ui.router']);
+     var mapModule = angular.module('map-module', ['ui.router',
+                                                   'leaflet-directive']);
 
      mapModule.controller('MapCtrl', ['$scope', MapCtrl]);
 
