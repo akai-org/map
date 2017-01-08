@@ -11,9 +11,12 @@
   "bugs": {
     "url": "https://github.com/akai-org/map/issues"
   },
-  "scripts": {"start": "npm install; npm install -g gulp; npm install -g bower; npm install -g http-server; gulp build:dev; http-server ./build"},
+  "scripts": {
+    "start": "node node_modules/gulp/bin/gulp build:dev && node web.js"
+  },
   "homepage": "https://github.com/akai-org/map#readme",
-  "devDependencies": {
+  "dependencies": {
+    "express": "^4.14.0",
     "gulp": "^3.9.1",
     "gulp-bower": "0.0.13",
     "gulp-concat": "^2.6.1",
@@ -27,6 +30,7 @@
     "gulp-sourcemaps": "^1.9.1",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
+    "http-server": "^0.9.0",
     "jshint": "^2.9.3",
     "run-sequence": "^1.2.2"
   }
