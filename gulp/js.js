@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var path = require('./path');
 var uglify = require('gulp-uglify');
 var util = require('gulp-util');
+var stripDebug = require('gulp-strip-debug');
 
 var buildJavaScript = function(debug) {
   var javaScript = gulp.src(path.app + '/**/*.js');
@@ -12,7 +13,8 @@ var buildJavaScript = function(debug) {
     }).on('error', util.log));
   }
 
-  javaScript = javaScript.pipe(gulp.dest(path.build.js));
+  javaScript = javaScript.pipe(stripDebug())
+                         .pipe(gulp.dest(path.build.js));
 
   return javaScript;
 };

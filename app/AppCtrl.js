@@ -5,7 +5,7 @@ define([], function() {
 
     function AppCtrl($scope) {
       this.$scope = $scope;
-
+      
     }
 
     // tutaj funkcje
