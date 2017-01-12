@@ -8,10 +8,16 @@ define(['./LandingPageCtrl'],
 
   landingModule.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('landing', {
-        url: '',
+      .state('abstractLanding', {
+        abstract: true,
         controller: 'LandingPageCtrl',
         templateUrl: 'html/landing/landing.html'
+      })
+      .state('abstractLanding.empty-landing', {
+        url: ''
+      })
+      .state('abstractLanding.landing', {
+        url: '/'
       });
   }]);
 
