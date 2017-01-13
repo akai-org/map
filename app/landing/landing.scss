@@ -1,27 +1,56 @@
-.landing {
-  &--container {
+body {
+  margin: 0;
+}
 
+.landing {
+  font-family: "Open Sans";
+  font-size: 16px;
+  height: 100vh;
+  text-align: center;
+  background-image: url('../img/background.jpg');
+  background-position: center;
+  background-size: cover;
+
+  &--container {
+    display: inline-block;
   }
 
   &--title {
-
+    border: solid 1px pink;
+    font-weight: bold;
+    color: #f3f3f3;
   }
 
   &--searchbox {
+    border: solid 1px pink;
     &--input {
-
+      margin: 0;
+      width: 240px;
+      height: 40px;
+      padding: 0 8px;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      background-color: #f3f3f3;
     }
 
     &--button {
-
+      margin: 0;
+      height: 40px;
+      width: 40px;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      background-color: #2e8bff;
     }
   }
 
   &--links {
-
+    border: solid 1px pink;
+    text-align: center;
   }
 
   &--link {
-
+    border: solid 1px pink;
+    text-decoration: none;
+    color: #f3f3f3;
   }
 }
