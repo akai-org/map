@@ -8,7 +8,7 @@ var path = {
   img: './app/img',
   build: {
     base: './build',
-    html: './build',
+    html: './build/html',
     assets: './build/assets',
     js: './build/js',
     css: './build/css',
