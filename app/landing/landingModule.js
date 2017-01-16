@@ -11,7 +11,7 @@ define(['./LandingPageCtrl'],
       .state('abstractLanding', {
         abstract: true,
         controller: 'LandingPageCtrl',
-        templateUrl: 'landing/landing.html'
+        templateUrl: 'html/landing/landing.html'
       })
       .state('abstractLanding.empty-landing', {
         url: ''

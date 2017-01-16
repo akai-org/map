@@ -11,7 +11,9 @@
   "bugs": {
     "url": "https://github.com/akai-org/map/issues"
   },
-  "scripts": {"start": "npm install; npm install -g gulp; npm install -g bower; npm install -g http-server; gulp build:dev; http-server ./build"},
+  "scripts": {
+    "start": "npm install; npm install -g gulp; npm install -g bower; npm install -g http-server; gulp build:dev; http-server ./build"
+  },
   "homepage": "https://github.com/akai-org/map#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
@@ -19,12 +21,14 @@
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.0.0",
     "gulp-cssnano": "^2.1.2",
+    "gulp-flatten": "^0.3.1",
     "gulp-imagemin": "^3.1.1",
     "gulp-jshint": "^2.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-rimraf": "^0.2.0",
     "gulp-sass": "^3.0.0",
     "gulp-sourcemaps": "^1.9.1",
+    "gulp-strip-debug": "^1.1.0",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
     "jshint": "^2.9.3",
