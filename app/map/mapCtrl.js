@@ -556,7 +556,7 @@ define([], function() {
         lat: position.lat,
         lng: position.lng,
         zoom: 17
-      }
+      };
     };
 
     return MapCtrl;
