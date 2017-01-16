@@ -38,7 +38,7 @@ define([], function() {
             id: 1,
             properties: {
               name: "Biblioteka Techniczna",
-              show: true
+              show: false
             },
             geometry: {
               type: "Polygon",

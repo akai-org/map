@@ -6,9 +6,37 @@
 $white: #f3f3f3;
 $mid-grey: #494949;
 $primary-blue: #2e8bff;
+$primary-blue-dark: darken($primary-blue, 10%);
 
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
+}
+
+.btn {
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+  &--blue {
+    background-color: $primary-blue;
+    border: 1px solid $primary-blue-dark;
+    color: white;
+
+    &:hover, &:focus {
+      background-color: $primary-blue-dark;
+      border-color: darken($primary-blue-dark, 10%);
+      color: $white;
+    };
+
+
+    &:active {
+      background-color: darken($primary-blue-dark, 10%);
+      color: $white;
+    }
+  }
 }

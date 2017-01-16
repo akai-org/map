@@ -2,9 +2,10 @@
 <div class="container">
   <div id="building-details" class="building--panel">
     <div class="building--panel--close-icon" ng-click="closeBuildingPanel()"></div>
-    <p ng-bind="selected.building.properties.name"></p>
-    <p>Jakiś adress???</p>
-    <button>Wejdź do budynku</button>
+    <h4 class="building--panel--title" ng-bind="selected.building.properties.name"></h4>
+
+    <p>Adres budynku...</p>
+    <button class="btn btn--blue">Wejdź do budynku</button>
   </div>
   <leaflet id="map" lf-center="center"
                       markers="markers"
