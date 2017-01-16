@@ -552,11 +552,8 @@ define([], function() {
     };
 
     MapCtrl.prototype.centerMap = function(position) {
-      this.$scope.center = {
-        lat: position.lat,
-        lng: position.lng,
-        zoom: 17
-      };
+      this.$scope.center.lat = position.lat;
+      this.$scope.center.lng = position.lng;
     };
 
     return MapCtrl;
