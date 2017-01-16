@@ -31,12 +31,16 @@ body {
       background-color: $primary-blue-dark;
       border-color: darken($primary-blue-dark, 10%);
       color: $white;
-    };
-
+    }
 
     &:active {
       background-color: darken($primary-blue-dark, 10%);
       color: $white;
     }
+  }
+
+  &--big {
+    width: 80%;
+    margin: 0 10%;
   }
 }

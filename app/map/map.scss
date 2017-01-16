@@ -9,13 +9,12 @@
   top: 20px;
   width: 250px;
   min-height: 100px;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 4px;
-  box-shadow: 0px 3px 15px #222;
+  background-color: lighten($white, 15%);
+  border-radius: 8px;
+  box-shadow: 0px 3px 10px #222;
   opacity: 0;
   z-index: 10;
-  padding: 5px 5px 10px 10px;
+  padding: 5px 10px 10px 10px;
   color: #515151;
 
   &--close-icon {
