@@ -9,7 +9,7 @@ define(['./editorPageCtrl'],
       $stateProvider
         .state('editor', {
           url: '/editor',
-          controller: 'editorPageCtrl',
+          controller: 'EditorPageCtrl',
           templateUrl: 'html/editor/editor.html'
         });
     }]);
