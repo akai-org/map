@@ -1,4 +1,4 @@
-define(['./EditorPageCtrl'],
+define(['./editorPageCtrl'],
   function (EditorPageCtrl) {
     'use strict';
 
@@ -9,7 +9,7 @@ define(['./EditorPageCtrl'],
       $stateProvider
         .state('editor', {
           url: '/editor',
-          controller: 'EditorPageCtrl',
+          controller: 'editorPageCtrl',
           templateUrl: 'html/editor/editor.html'
         });
     }]);
