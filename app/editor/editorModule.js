@@ -10,7 +10,7 @@ define(['./EditorPageCtrl'],
         .state('editor', {
           url: '/editor',
           controller: 'EditorPageCtrl',
-          templateUrl: 'editor/editor.html'
+          templateUrl: 'html/editor/editor.html'
         });
     }]);
 
