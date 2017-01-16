@@ -1,12 +1,16 @@
 <!doctype html>
 <div class="container">
-  <div>
-
+  <div id="building-details" class="building--panel">
+    <div class="building--panel--close-icon" ng-click="closeBuildingPanel()"></div>
+    <p ng-bind="selected.building.properties.name"></p>
+    <p>Jakiś adress???</p>
+    <button>Wejdź do budynku</button>
   </div>
   <leaflet id="map" lf-center="center"
                       markers="markers"
                       geojson="geojson"
                       event-broadcast="events">
   </leaflet>
+
   <a class="btn-test" ui-sref="abstractLanding.landing">Powrot do landing</a>
 </div>
