@@ -8,9 +8,18 @@ gulp.task('lib:js', function() {
   return gulp.src([
       path.bower + '/jquery/dist/jquery.min.js',
       path.bower + '/angular/angular.min.js',
-      path.bower + '/angular-ui-router/release/angular-ui-router.min.js'
+      path.bower + '/angular-ui-router/release/angular-ui-router.min.js',
+      path.bower + '/leaflet/dist/leaflet.js',
+      path.bower + '/angular-leaflet-directive/dist/angular-leaflet-directive.min.js'
     ])
     .pipe(gulp.dest(path.build.js + '/lib'));
+});
+
+gulp.task('lib:css', function() {
+  return gulp.src([
+      path.bower + '/leaflet/dist/leaflet.css'
+    ])
+    .pipe(gulp.dest(path.build.css + '/lib'));
 });
 
 gulp.task('requirejs', function() {
@@ -22,4 +31,4 @@ gulp.task('requirejs', function() {
     .pipe(gulp.dest(path.build.js + '/lib'));
 });
 
-gulp.task('libs', ['lib:js', 'requirejs']);
+gulp.task('libs', ['lib:js', 'lib:css', 'requirejs']);

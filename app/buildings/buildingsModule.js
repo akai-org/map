@@ -2,7 +2,7 @@ define(['./buildingsCtrl'],
   function(BuildingsCtrl) {
     'use strict';
 
-    var buildingsModule = angular.module('buildings-module', ['ui.router']);
+    var buildingsModule = angular.module('buildings-module', ['ui.router', 'leaflet-directive']);
 
     buildingsModule.controller('BuildingsCtrl', ['$scope', BuildingsCtrl]);
 
@@ -11,7 +11,7 @@ define(['./buildingsCtrl'],
         .state('buildings', {
           url: '/buildings',
           controller: 'BuildingsCtrl',
-          templateUrl: 'buildings/buildings.html'
+          templateUrl: 'html/buildings/buildings.html'
         });
     }]);
 

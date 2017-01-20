@@ -11,6 +11,8 @@
     "jquery": "~2.2.4",
     "jquery-ui": "~1.11.4",
     "angular": "~1.6.0",
-    "angular-ui-router": "^0.3.1"
+    "angular-ui-router": "^0.3.1",
+    "leaflet": "0.7.x",
+    "angular-leaflet-directive": "0.10.0"
   }
 }

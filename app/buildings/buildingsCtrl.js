@@ -5,9 +5,17 @@ define([], function() {
 
     function BuildingsCtrl($scope) {
       this.$scope = $scope;
+
+      this.initializeMap();
     }
 
-    // tutaj funkcje
+    BuildingsCtrl.prototype.initializeMap = function () {
+      this.$scope.center = {
+        lat: 52.40257,
+        lng: 16.94933,
+        zoom: 17
+      };
+    };
 
     return BuildingsCtrl;
   })();

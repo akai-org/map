@@ -1,4 +1,4 @@
-define(['./EditorPageCtrl'],
+define(['./editorPageCtrl'],
   function (EditorPageCtrl) {
     'use strict';
 

@@ -1,5 +1,19 @@
 <!doctype html>
-<div class="container">
-  <div id="mapid"></div>
-  <a class="btn-test" ui-sref="abstractLanding.landing">Powrot do landing</a>
+<div>
+  <div id="building-details" class="building--panel" ng-show="selected.building">
+    <div class="building--panel--close-icon" ng-click="closeBuildingPanel()"></div>
+    <h4 class="building--panel--title" ng-bind="selected.building.properties.name"></h4>
+
+    <div class="building--panel--details">
+      <p class="details-text" ng-bind-template="{{ selected.building.properties.address ? selected.building.properties.address : 'Adres...' }}"></p>
+      <p class="details-text" ng-bind-template="{{ selected.building.properties.link ? selected.building.properties.link : 'strona www...' }}"></p>
+      <p class="details-text" ng-bind-template="{{ selected.building.properties.phone ? selected.building.properties.phone : 'telefon...' }}"></p>
+    </div>
+    <button class="btn btn--big btn--blue">Wejdź do budynku</button>
+  </div>
+  <leaflet id="map" lf-center="center"
+                    markers="markers"
+                    geojson="geojson"
+                    event-broadcast="events">
+  </leaflet>
 </div>
