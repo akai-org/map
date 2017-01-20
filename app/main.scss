@@ -27,7 +27,7 @@ body {
     border: 1px solid $primary-blue-dark;
     color: white;
 
-    &:hover, &:focus {
+    &:hover {
       background-color: $primary-blue-dark;
       border-color: darken($primary-blue-dark, 10%);
       color: $white;
