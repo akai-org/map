@@ -2,17 +2,20 @@ require([
     './AppCtrl',
     './landing/landingModule',
     './map/mapModule',
-    './buildings/buildingsModule'],
+    './buildings/buildingsModule',
+    './editor/editorModule'],
   function (AppCtrl,
             landingModule,
             mapModule,
-            buildingsModule) {
+            buildingsModule,
+            editorModule) {
     'use strict';
 
     var interactiveMapApp = angular.module('interactive-map-app', [
       'landing-module',
       'map-module',
       'buildings-module',
+      'editor-module',
       'ui.router']);
 
     interactiveMapApp.run(['$rootScope', '$state', function ($rootScope, $state) {
