@@ -11,10 +11,10 @@ var buildJavaScript = function(debug) {
     javaScript = javaScript.pipe(uglify({
       preserveComments: 'license'
     }).on('error', util.log));
+    javaScript = javaScript.pipe(stripDebug());
   }
 
-  javaScript = javaScript.pipe(stripDebug())
-                         .pipe(gulp.dest(path.build.js));
+  javaScript = javaScript.pipe(gulp.dest(path.build.js));
 
   return javaScript;
 };
