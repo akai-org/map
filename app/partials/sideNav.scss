@@ -1,20 +1,32 @@
 .side-nav {
+  opacity: 0;
   width: 300px;
   box-sizing: border-box;
   padding: 25px 50px;
   background-color: #f7f7f7;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -300px;
   min-height: 100vh;
+  z-index: 10;
+  box-shadow: 10px 0px 100px black;
+  transition: opacity 0.5s, left 0.5s;
+
+  &.active {
+    opacity: 1;
+    left: 0;
+  }
 
 
-  &--close-icon {
+&--close-icon {
     font-family: "FontAwesome";
     font-size: 24px;
     text-decoration: none;
     float: right;
     color: #515151;
+    cursor: pointer;
+    border: none;
+    background: none;
 
     &:after {
       content: "\f00d";

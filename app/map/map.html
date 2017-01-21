@@ -1,5 +1,5 @@
 <!doctype html>
-<div>
+<div ng-controller="MapCtrl">
   <div id="building-details" class="building--panel" ng-show="selected.building">
     <div class="building--panel--close-icon" ng-click="closeBuildingPanel()"></div>
     <h4 class="building--panel--title" ng-bind="selected.building.properties.name"></h4>
@@ -9,7 +9,7 @@
       <p class="details-text" ng-bind-template="{{ selected.building.properties.link ? selected.building.properties.link : 'strona www...' }}"></p>
       <p class="details-text" ng-bind-template="{{ selected.building.properties.phone ? selected.building.properties.phone : 'telefon...' }}"></p>
     </div>
-    <button class="btn btn--big btn--blue">Wejdź do budynku</button>
+    <button class="btn btn--big btn--blue" ng-click="goInside()">Wejdź do budynku</button>
   </div>
   <leaflet id="map" lf-center="center"
                     markers="markers"
