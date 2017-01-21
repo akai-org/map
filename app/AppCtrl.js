@@ -11,7 +11,7 @@ define([], function() {
     AppCtrl.prototype.sidenavToggle = function () {
       // var elem = $($event.currentTarget) || $($event.srcElement);
       // elem.parent().toggleClass('active');
-      $('.side-nav').toggleClass('active');
+      angular.element('.side-nav').toggleClass('active');
     };
 
 
