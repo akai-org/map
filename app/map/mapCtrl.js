@@ -12,6 +12,8 @@ define([], function() {
       this.getBuildingsData();
       this.initializeMap();
 
+      this.$scope.goInside = angular.bind(this, this.goInside);
+
       $scope.$on('leafletDirectiveMap.map.click', angular.bind(this, this.clickMapListener));
       $scope.$on('leafletDirectiveGeoJson.map.click', angular.bind(this, this.buildingClickListener));
     }
@@ -43,6 +45,16 @@ define([], function() {
     //     console.log('[' + this.$scope.markers[i].lng + ', ' + this.$scope.markers[i].lat + "],");
     //   }
     // };
+
+    MapCtrl.prototype.goInside = function(event, args) {
+      console.log(args);
+      console.log("cloc");
+      // this.$scope.geojson.data.features = this.$scope.geojson.data.features.map(function(b) {
+      //   b.properties.show = false;
+      //   return b;
+      // });
+      // delete this.$scope.selected;
+    };
 
     MapCtrl.prototype.clickMapListener = function(event, args) {
       this.$scope.geojson.data.features = this.$scope.geojson.data.features.map(function(b) {

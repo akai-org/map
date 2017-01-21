@@ -5,10 +5,15 @@ define([], function() {
 
     function AppCtrl($scope) {
       this.$scope = $scope;
-      
+      $scope.sidenavToggle = angular.bind(this, this.sidenavToggle);
     }
 
-    // tutaj funkcje
+    AppCtrl.prototype.sidenavToggle = function () {
+      // var elem = $($event.currentTarget) || $($event.srcElement);
+      // elem.parent().toggleClass('active');
+      $('.side-nav').toggleClass('active');
+    };
+
 
     return AppCtrl;
   })();

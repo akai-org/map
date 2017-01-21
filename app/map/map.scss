@@ -1,6 +1,10 @@
 #map {
    width: 100%;
    height: 100vh;
+
+  .leaflet-top {
+    z-index: 8;
+  }
 }
 
 .building--panel {
