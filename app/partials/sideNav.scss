@@ -7,7 +7,11 @@
   top: 0;
   left: 0;
   min-height: 100vh;
+  z-index: 1001;
 
+  &--closed {
+    display: none;
+  }
 
   &--close-icon {
     font-family: "FontAwesome";
@@ -80,4 +84,19 @@
     }
   }
 
+}
+
+.overlay {
+  background: rgba(0, 0, 0, .7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  cursor: pointer;
+
+  .side-nav--closed + & {
+    display: none;
+  }
 }
