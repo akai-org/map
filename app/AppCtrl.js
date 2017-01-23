@@ -13,7 +13,7 @@ define([], function() {
 
     AppCtrl.prototype.closeSideNav = function() {
       this.$scope.sideNavClosed = true;
-    }
+    };
 
     // tutaj funkcje
 
