@@ -4,12 +4,12 @@ define(['./buildingsCtrl'],
 
     var buildingsModule = angular.module('buildings-module', ['ui.router', 'leaflet-directive']);
 
-    buildingsModule.controller('BuildingsCtrl', ['$scope', BuildingsCtrl]);
+    buildingsModule.controller('BuildingsCtrl', ['$scope', '$state', '$stateParams', BuildingsCtrl]);
 
     buildingsModule.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
       $stateProvider
         .state('buildings', {
-          url: '/buildings',
+          url: '/buildings/:id',
           controller: 'BuildingsCtrl',
           templateUrl: 'html/buildings/buildings.html'
         });
