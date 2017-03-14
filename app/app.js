@@ -23,7 +23,7 @@ require([
         $rootScope.$on('$stateChangeStart',
             function(event, toState, toParams, fromState, fromParams, options){
                 $rootScope.landingView = toParams.landingPageView ? true : false;
-            })
+            });
     }]);
 
     interactiveMapApp.constant('campuses', {
