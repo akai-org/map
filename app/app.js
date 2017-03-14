@@ -10,7 +10,7 @@ require([
             buildingsModule,
             editorModule) {
     'use strict';
-
+//
     var interactiveMapApp = angular.module('interactive-map-app', [
       'landing-module',
       'map-module',
