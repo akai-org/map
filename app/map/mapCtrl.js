@@ -3,9 +3,11 @@ define([], function() {
 
   var MapCtrl = (function() {
 
-    function MapCtrl($scope, $http, $stateParams) {
+    function MapCtrl($scope, $http, $stateParams, campuses) {
       this.$scope = $scope;
       this.$http = $http;
+      this.$stateParams = $stateParams;
+      this.campuses = campuses;
       console.log($stateParams);
 
       this.$scope.closeBuildingPanel = angular.bind(this, this.closeBuildingPanel);
@@ -18,9 +20,14 @@ define([], function() {
     }
 
     MapCtrl.prototype.initializeMap = function () {
+      var campusId = this.$stateParams.campus;
+      var campus = this.campuses.filter(function(c) {
+        return c.id === campusId;
+      });
+
       this.$scope.center = {
-        lat: 52.40257,
-        lng: 16.94933,
+        lat: campus[0].coords[0],
+        lng: campus[0].coords[1],
         zoom: 17
       };
 
