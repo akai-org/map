@@ -1,1 +1,52 @@
-#mapid { height: 380px; }
+#map {
+   width: 100%;
+   height: 100vh;
+
+  .leaflet-top {
+    z-index: 8;
+  }
+}
+
+.building--panel {
+  position: absolute;
+  right: 20px;
+  top: 70px;
+  width: 250px;
+  min-height: 75px;
+  background-color: lighten($white, 15%);
+  border-radius: 8px;
+  box-shadow: 0px 3px 10px #222;
+  z-index: 10;
+  padding: 5px 10px 10px 10px;
+  color: #515151;
+
+  &--close-icon {
+    font-family: "FontAwesome";
+    text-decoration: none;
+    float: right;
+    cursor: pointer;
+
+    &:after {
+      content: "\f00d";
+    }
+  }
+
+  &--title {
+    margin: 1em 0;
+    padding: 0;
+  }
+
+  &--details {
+    & .details-text {
+      margin: 0;
+
+      &:first-child {
+        margin-top: 1em;
+      }
+
+      &:last-child {
+        margin-bottom: 1em;
+      }
+    }
+  }
+}

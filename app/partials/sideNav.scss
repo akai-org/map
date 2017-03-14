@@ -1,0 +1,95 @@
+.side-nav {
+  opacity: 0;
+  width: 300px;
+  box-sizing: border-box;
+  padding: 25px 50px;
+  background-color: #f7f7f7;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  min-height: 100vh;
+  z-index: 10;
+  box-shadow: 10px 0px 100px black;
+  transition: opacity 0.5s, left 0.5s;
+
+  &.active {
+    opacity: 1;
+    left: 0;
+  }
+
+
+&--close-icon {
+    font-family: "FontAwesome";
+    font-size: 24px;
+    text-decoration: none;
+    float: right;
+    color: #515151;
+    cursor: pointer;
+    border: none;
+    background: none;
+
+    &:after {
+      content: "\f00d";
+    }
+  }
+
+  &--link {
+    text-decoration: none;
+    color: #515151;
+    margin: 20px 0;
+    display: block;
+    font-size: 14px;
+
+    &.active:before {
+      content:'\00B7';
+      font-size: 60px;
+      padding-right: 5px;
+      color: #328cfa;
+
+      content: '\00B7';
+      font-size: 60px;
+      line-height: 39px;
+      color: #328cfa;
+      margin-top: 0px;
+      margin-left: -20px;
+      display: block;
+      position: relative;
+      height: 10px;
+    }
+  }
+
+  &--section-header {
+    color: #cfcfcf;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 40px 0 10px;
+  }
+
+  &--social-icon {
+    // TODO: mixin
+    text-decoration: none;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 0px;
+    font-family: "FontAwesome";
+    margin: 10px 20px 10px 0px;
+
+    &[href*="facebook"]:before {
+      font-size: 48px;
+      color: #3c5a96;
+      content: "\f230";
+    }
+    &[href*="twitter"]:before {
+      font-size: 48px;
+      color: #34aade;
+      content: "\f099";
+    }
+    &[href*="github"]:before {
+      font-size: 48px;
+      color: #000;
+      content: "\f09b";
+    }
+  }
+
+}

@@ -3,12 +3,21 @@ define([], function() {
 
   var AppCtrl = (function() {
 
-    function AppCtrl($scope) {
+    function AppCtrl($scope, campuses, $rootScope) {
       this.$scope = $scope;
+      this.$rootScope = $rootScope;
+      this.$scope.campuses = campuses;
 
+      this.$scope.sideNavClosed = false;
+      this.$scope.closeSideNav = angular.bind(this, this.closeSideNav);
+
+      $scope.sidenavToggle = angular.bind(this, this.sidenavToggle);
     }
 
-    // tutaj funkcje
+    AppCtrl.prototype.sidenavToggle = function () {
+      angular.element('.side-nav').toggleClass('active');
+    };
+
 
     return AppCtrl;
   })();

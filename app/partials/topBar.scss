@@ -1,0 +1,42 @@
+.top-bar {
+  width: 100%;
+  background-color: $white;
+
+  &--menu-icon {
+    font-family: "FontAwesome";
+    font-size: 24px;
+    text-decoration: none;
+    color: #aeaeae;
+    display: inline-block;
+    padding: 20px 10px 20px 30px;
+    background: none;
+    border: none;
+
+    &:after {
+      content: "\f0c9";
+    }
+  }
+
+  &--searchbox--input {
+    margin: 0;
+    padding: 0 16px;
+    width: 300px;
+    height: 44px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    background-color: $white;
+    font-size: initial;
+    color: $mid-grey;
+    vertical-align: bottom;
+  }
+
+  &--searchbox--button {
+    background: none;
+    border: none;
+    color: #aeaeae;
+  }
+}
+.landing-page-hamburger{
+  position: absolute;
+}

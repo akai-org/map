@@ -2,16 +2,17 @@ define(['./mapCtrl'],
         function(MapCtrl) {
     'use strict';
 
-     var mapModule = angular.module('map-module', ['ui.router']);
+     var mapModule = angular.module('map-module', ['ui.router',
+                                                   'leaflet-directive']);
 
-     mapModule.controller('MapCtrl', ['$scope', MapCtrl]);
+     mapModule.controller('MapCtrl', ['$scope', '$http', '$stateParams', MapCtrl]);
 
      mapModule.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
        $stateProvider
           .state('map', {
-            url: '/map',
+            url: '/map/:campus',
             controller: 'MapCtrl',
-            templateUrl: 'map/map.html'
+            templateUrl: 'html/map/map.html'
           });
      }]);
 
