@@ -26,7 +26,7 @@ define([], function() {
       this.$scope.center = {
         lat: campus.coords[0],
         lng: campus.coords[1],
-        zoom: 17
+        zoom: campus.zoom
       };
 
       this.$scope.markers = [];
