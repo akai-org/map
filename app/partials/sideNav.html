@@ -3,7 +3,7 @@
   <button class="side-nav--close-icon" ng-click="sidenavToggle()"></button>
 
   <h4 class="side-nav--section-header">Przejdź do</h4>
-  <a ng-href="#!/map/{{ campus.id }}" class="side-nav--link" ng-repeat="campus in campuses" ng-bind="campus.name"></a>
+  <a ui-sref="map({ campus: id })" class="side-nav--link" ng-repeat="(id, campus) in campuses" ng-bind="campus.name"></a>
 
   <h4 class="side-nav--section-header">Informacje</h4>
   <a href="#!" class="side-nav--link">O aplikacji</a>

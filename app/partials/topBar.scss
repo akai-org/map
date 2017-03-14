@@ -11,6 +11,8 @@
     padding: 20px 10px 20px 30px;
     background: none;
     border: none;
+    cursor: pointer;
+    outline: none;
 
     &:after {
       content: "\f0c9";
