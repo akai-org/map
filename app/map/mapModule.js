@@ -5,7 +5,7 @@ define(['./mapCtrl'],
      var mapModule = angular.module('map-module', ['ui.router',
                                                    'leaflet-directive']);
 
-     mapModule.controller('MapCtrl', ['$scope', '$http', '$stateParams', MapCtrl]);
+     mapModule.controller('MapCtrl', ['$scope', '$http', '$stateParams', 'campuses', MapCtrl]);
 
      mapModule.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
        $stateProvider
