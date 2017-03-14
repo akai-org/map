@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<div class="top-bar">
+<button ng-if="landingView" class="top-bar--menu-icon landing-page-hamburger" ng-click="sidenavToggle()"></button>
+<div ng-if="!landingView" class="top-bar">
   <button class="top-bar--menu-icon" ng-click="sidenavToggle()"></button>
   <input type="text" class="top-bar--searchbox--input" placeholder="Wyszukaj...">
   <button class="top-bar--searchbox--button">

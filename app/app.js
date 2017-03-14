@@ -20,7 +20,12 @@ require([
 
     interactiveMapApp.run(['$rootScope', '$state', function ($rootScope, $state) {
       $rootScope.title = 'Interaktywna mapa Politechniki Poznańskiej';
+        $rootScope.$on('$stateChangeStart',
+            function(event, toState, toParams, fromState, fromParams, options){
+                $rootScope.landingView = toParams.landingPageView ? true : false;
+            })
     }]);
+
 
     interactiveMapApp.constant('campuses', [
       {
@@ -40,7 +45,7 @@ require([
       }
     ]);
 
-    interactiveMapApp.controller('AppCtrl', ['$scope', 'campuses', AppCtrl]);
+    interactiveMapApp.controller('AppCtrl', ['$scope', 'campuses', '$rootScope', AppCtrl]);
 
     angular.bootstrap(document, ['interactive-map-app']);
 

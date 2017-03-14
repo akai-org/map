@@ -3,9 +3,9 @@ define([], function() {
 
   var AppCtrl = (function() {
 
-    function AppCtrl($scope, campuses) {
+    function AppCtrl($scope, campuses, $rootScope) {
       this.$scope = $scope;
-
+      this.$rootScope = $rootScope;
       this.$scope.campuses = campuses;
 
       this.$scope.sideNavClosed = false;

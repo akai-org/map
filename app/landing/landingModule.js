@@ -14,10 +14,16 @@ define(['./landingPageCtrl'],
         templateUrl: 'html/landing/landing.html'
       })
       .state('abstractLanding.empty-landing', {
-        url: ''
+        url: '',
+          params: {
+            landingPageView: true
+          }
       })
       .state('abstractLanding.landing', {
-        url: '/'
+        url: '/',
+          params: {
+              landingPageView: true
+          }
       });
   }]);
 
