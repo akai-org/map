@@ -22,23 +22,20 @@ require([
       $rootScope.title = 'Interaktywna mapa Politechniki Poznańskiej';
     }]);
 
-    interactiveMapApp.constant('campuses', [
-      {
-        id: 'piotrowo',
+    interactiveMapApp.constant('campuses', {
+      'piotrowo': {
         name: 'Kampus Piotrowo',
         coords: [52.4022733, 16.9496852]
       },
-      {
-        id: 'nieszawska',
+      'nieszawska': {
         name: 'Kampus Nieszawska',
         coords: [52.4163383, 16.9804755]
       },
-      {
-        id: 'strzelecka',
+      'strzelecka': {
         name: 'Kampus Strzelecka',
         coords: [52.4047467, 16.9330464]
       }
-    ]);
+    });
 
     interactiveMapApp.controller('AppCtrl', ['$scope', 'campuses', AppCtrl]);
 
