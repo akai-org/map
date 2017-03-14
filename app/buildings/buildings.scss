@@ -2,3 +2,8 @@
   width: 100%;
   height: 300px;
 }
+
+#Warstwa_1 {
+  transform: rotateY(33deg) rotateX(-70deg) perspective(68px);
+  backface-visibility: hidden;
+}
