@@ -26,24 +26,23 @@ require([
             })
     }]);
 
-
-    interactiveMapApp.constant('campuses', [
-      {
-        id: 'piotrowo',
+    interactiveMapApp.constant('campuses', {
+      'piotrowo': {
         name: 'Kampus Piotrowo',
-        coords: [52.4022733, 16.9496852]
+        coords: [52.4022733, 16.9496852],
+        zoom: 17
       },
-      {
-        id: 'nieszawska',
+      'nieszawska': {
         name: 'Kampus Nieszawska',
-        coords: [52.4163383, 16.9804755]
+        coords: [52.4163383, 16.9804755],
+        zoom: 17
       },
-      {
-        id: 'strzelecka',
+      'strzelecka': {
         name: 'Kampus Strzelecka',
-        coords: [52.4047467, 16.9330464]
+        coords: [52.4047467, 16.9330464],
+        zoom: 20
       }
-    ]);
+    });
 
     interactiveMapApp.controller('AppCtrl', ['$scope', 'campuses', '$rootScope', AppCtrl]);
 
