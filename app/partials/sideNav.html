@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<div class="side-nav">
-  <a href="#" class="side-nav--close-icon"></a>
+
+<div class="side-nav" ng-class="{'side-nav--closed': sideNavClosed}">
+  <a href class="side-nav--close-icon" ng-click="closeSideNav()"></a>
 
   <h4 class="side-nav--section-header">Przejdź do</h4>
-  <a href="#!" class="side-nav--link active">Kampus Piotrowo</a>
-  <a href="#!" class="side-nav--link">Kampus Strzelecka</a>
-  <a href="#!" class="side-nav--link">Kampus Nieszawska</a>
+  <a ng-href="#!/map/{{ campus.id }}" class="side-nav--link" ng-repeat="campus in campuses" ng-bind="campus.name"></a>
 
   <h4 class="side-nav--section-header">Informacje</h4>
   <a href="#!" class="side-nav--link">O aplikacji</a>
@@ -18,3 +17,4 @@
   <a href="https://github.com/akai-org" class="side-nav--social-icon">Github</a>
 
 </div>
+<div class="overlay" ng-click="closeSideNav()"></div>
