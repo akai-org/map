@@ -9,7 +9,7 @@
       <p class="details-text" ng-bind-template="{{ selected.building.properties.link ? selected.building.properties.link : 'strona www...' }}"></p>
       <p class="details-text" ng-bind-template="{{ selected.building.properties.phone ? selected.building.properties.phone : 'telefon...' }}"></p>
     </div>
-    <button class="btn btn--big btn--blue" ng-click="goInside()">Wejdź do budynku</button>
+    <button class="btn btn--big btn--blue" ui-sref="buildings({ id: selected.building.id })">Wejdź do budynku</button>
   </div>
   <leaflet id="map" lf-center="center"
                     markers="markers"

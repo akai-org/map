@@ -3,9 +3,10 @@ define([], function() {
 
   var MapCtrl = (function() {
 
-    function MapCtrl($scope, $http) {
+    function MapCtrl($scope, $http, $stateParams) {
       this.$scope = $scope;
       this.$http = $http;
+      console.log($stateParams);
 
       this.$scope.closeBuildingPanel = angular.bind(this, this.closeBuildingPanel);
 

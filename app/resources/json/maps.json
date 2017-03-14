@@ -1,0 +1,959 @@
+{
+  "maps": [{
+    "id": 0,
+    "name": "Kampus Piotrowo",
+    "address": "ul. Piotrowo",
+    "abbreviation": "kampus",
+    "menu": true,
+    "floors": [{
+      "id": 0,
+      "name": "0",
+      "svg": "kampus.svg",
+      "css": "map-kampus",
+      "rooms": [{
+        "id": 0,
+        "name": "Centrum Wykładowe",
+        "svg": "CW"
+      }, {
+        "id": 1,
+        "name": "Biblioteka Techniczna",
+        "svg": "BT"
+      }, {
+        "id": 2,
+        "name": "Wydział Budowy Maszyn i Zarządzania",
+        "svg": "BM"
+      }, {
+        "id": 3,
+        "name": "Wydział Elektryczny",
+        "svg": "E"
+      }, {
+        "id": 4,
+        "name": "Hala 6",
+        "svg": "H6"
+      }, {
+        "id": 5,
+        "name": "Centrum Mechatroniki",
+        "svg": "CMBIN"
+      }, {
+        "id": 6,
+        "name": "Wydział Technologii Chemicznej",
+        "svg": "WTCH"
+      }, {
+        "id": 7,
+        "name": "Wydział Elektroniki i Telekomunikacji",
+        "svg": "WEIT"
+      }, {
+        "id": 8,
+        "name": "Hala 15",
+        "svg": "H15"
+      }, {
+        "id": 9,
+        "name": "Hala 16",
+        "svg": "H16"
+      }, {
+        "id": 10,
+        "name": "Hala 17",
+        "svg": "H17"
+      }, {
+        "id": 11,
+        "name": "Hala 19",
+        "svg": "H19"
+      }, {
+        "id": 12,
+        "name": "Hala 20",
+        "svg": "H20"
+      }, {
+        "id": 13,
+        "name": "Hala 21",
+        "svg": "H21"
+      }, {
+        "id": 14,
+        "name": "Hala 22",
+        "svg": "H22"
+      }, {
+        "id": 15,
+        "name": "Hala 23",
+        "svg": "H23"
+      }, {
+        "id": 16,
+        "name": "Hala 24",
+        "svg": "H24"
+      }, {
+        "id": 17,
+        "name": "Parking Centrum Mechatroniki",
+        "svg": "CMP"
+      }, {
+        "id": 18,
+        "name": "Drogowskaz przed budynkiem Budowy Maszyn",
+        "svg": "K-D01",
+        "qr": "NN2016DROG-NMRC"
+      }, {
+        "id": 19,
+        "name": "Drogowskaz koło budynku Budownictwa Lądowego",
+        "svg": "K-D02",
+        "qr": "NN2016DROG-OSIA"
+      }, {
+        "id": 20,
+        "name": "Drogowskaz na rogu Kórnickiej/Piotrowo",
+        "svg": "K-D03",
+        "qr": "NN2016DROG-TP1C"
+      }, {
+        "id": 21,
+        "name": "Drogowskaz na Kórnickiej między DSami",
+        "svg": "K-D04",
+        "qr": "NN2016DROG-MPXN"
+      }, {
+        "id": 22,
+        "name": "Drogowskaz na ul. Jana Pawła",
+        "svg": "K-D05",
+        "qr": "NN2016DROG-IM6H"
+      }, {
+        "id": 23,
+        "name": "Drogowskaz na ul. Berdychowo",
+        "svg": "K-D06",
+        "qr": "NN2016DROG-7CAM"
+      }]
+    }]
+  }, {
+    "id": 1,
+    "name": "Centrum Wykładowe",
+    "address": "ul. Piotrowo 2",
+    "abbreviation": "CW",
+    "menu": true,
+    "floors": [{
+      "id": 0,
+      "name": "0",
+      "svg": "CW0.svg",
+      "css": "map-cw0",
+      "rooms": [{
+        "id": 0,
+        "name": "Sala 1",
+        "svg": "sala1"
+      }, {
+        "id": 1,
+        "name": "Sala 2",
+        "svg": "sala2"
+      }, {
+        "id": 2,
+        "name": "Sala 3",
+        "svg": "sala3"
+      }, {
+        "id": 3,
+        "name": "Sala 5",
+        "svg": "sala5"
+      }, {
+        "id": 4,
+        "name": "Sala 6",
+        "svg": "sala6"
+      }, {
+        "id": 5,
+        "name": "Aula Magna",
+        "svg": "aula"
+      }, {
+        "id": 6,
+        "name": "Hol",
+        "svg": "hol"
+      }, {
+        "id": 7,
+        "name": "Drogowskaz - Hol",
+        "svg": "CW-0-D01",
+        "qr": "NN2016DROG-HHZP"
+      }, {
+        "id": 8,
+        "name": "Drogowskaz - obok sali 3",
+        "svg": "CW-0-D02",
+        "qr": "NN2016DROG-YHJU"
+      }, {
+        "id": 9,
+        "name": "Drogowskaz - obok WC",
+        "svg": "CW-0-D03",
+        "qr": "NN2016DROG-IBOQ"
+      }, {
+        "id": 10,
+        "name": "Drogowskaz - obok Sali 6",
+        "svg": "CW-0-D04",
+        "qr": "NN2016DROG-E7VH"
+      }]
+    }, {
+      "id": 1,
+      "name": "1",
+      "svg": "CW1.svg",
+      "css": "map-cw1",
+      "rooms": [{
+        "id": 0,
+        "name": "Sala 7",
+        "svg": "sala7"
+      }, {
+        "id": 1,
+        "name": "Sala 9",
+        "svg": "sala9"
+      }, {
+        "id": 2,
+        "name": "Sala 12",
+        "svg": "sala12"
+      }, {
+        "id": 3,
+        "name": "Sala 13",
+        "svg": "sala13"
+      }, {
+        "id": 4,
+        "name": "Drogowskaz - naprzeciw sali 13",
+        "svg": "CW-1-D11",
+        "qr": "NN2016DROG-1NSG"
+      }, {
+        "id": 5,
+        "name": "Drogowskaz - naprzeciw sali 12",
+        "svg": "CW-1-D12",
+        "qr": "NN2016DROG-3856"
+      }, {
+        "id": 6,
+        "name": "Drogowskaz - na mostku przy sali nad Aulą Magna",
+        "svg": "CW-1-D13",
+        "qr": "NN2016DROG-18YT"
+      }, {
+        "id": 7,
+        "name": "Drogowskaz - pomiędzy WC a salą 7",
+        "svg": "CW-1-D14",
+        "qr": "NN2016DROG-DFVC"
+      }, {
+        "id": 8,
+        "name": "Drogowskaz - obok WC na końcu korytarza, za schodami",
+        "svg": "CW-1-D15",
+        "qr": "NN2016DROG-13PK"
+      }, {
+        "id": 9,
+        "name": "Drogowskaz - obok sali 9",
+        "svg": "CW-1-D16",
+        "qr": "NN2016DROG-PGLO"
+      }]
+    }]
+  }, {
+    "id": 2,
+    "name": "Biblioteka Techniczna",
+    "address": "ul. Piotrowo 2",
+    "abbreviation": "BT",
+    "menu": true,
+    "floors": [{
+      "id": 0,
+      "name": "0",
+      "svg": "BT0.svg",
+      "css": "map-bt0",
+      "rooms": [{
+        "id": 0,
+        "name": "Pasaż na parterze",
+        "svg": "pasaz"
+      }, {
+        "id": 1,
+        "name": "Sala 53",
+        "svg": "sala53"
+      }, {
+        "id": 2,
+        "name": "Wypożyczalnia",
+        "svg": "wypozyczalnia"
+      }, {
+        "id": 3,
+        "name": "Hol",
+        "svg": "hol"
+      }, {
+        "id": 4,
+        "name": "Akwarium",
+        "svg": "akwarium"
+      }, {
+        "id": 5,
+        "name": "Pasaż przed salą 51",
+        "svg": "pasaz"
+      }, {
+        "id": 6,
+        "name": "Sala 51",
+        "svg": "sala51"
+      }, {
+        "id": 7,
+        "name": "Drogowskaz - Hol Główny",
+        "svg": "BT-0-D01",
+        "qr": "NN2016DROG-129Z"
+      }, {
+        "id": 8,
+        "name": "Drogowskaz - Pasaż",
+        "svg": "BT-0-D02",
+        "qr": "NN2016DROG-7YAB"
+      }, {
+        "id": 9,
+        "name": "Drogowskaz - korytarz naprzeciw wejścia do wypożyczalni",
+        "svg": "BT-0-D03",
+        "qr": "NN2016DROG-ECP4"
+      }, {
+        "id": 10,
+        "name": "Drogowskaz - mniejszy Hol",
+        "svg": "BT-0-D04",
+        "qr": "NN2016DROG-536C"
+      }, {
+        "id": 11,
+        "name": "Drogowskaz - korytarz naprzeciw sali 53",
+        "svg": "BT-0-D05",
+        "qr": "NN2016DROG-VBKN"
+      }]
+    }, {
+      "id": 1,
+      "name": "1",
+      "svg": "BT1.svg",
+      "css": "map-bt1",
+      "rooms": [{
+        "id": 0,
+        "name": "Sala 121",
+        "svg": "sala121"
+      }, {
+        "id": 1,
+        "name": "Sala 122",
+        "svg": "sala122"
+      }, {
+        "id": 2,
+        "name": "Sala 123",
+        "svg": "sala123"
+      }, {
+        "id": 3,
+        "name": "Hol przed salą 123",
+        "svg": "sala123"
+      }, {
+        "id": 4,
+        "name": "Sala 126",
+        "svg": "sala126"
+      }, {
+        "id": 5,
+        "name": "Sala seminaryjna",
+        "svg": "ss"
+      }, {
+        "id": 6,
+        "name": "Czytelnia - Informatorium",
+        "svg": "informatorium"
+      }, {
+        "id": 7,
+        "name": "Drogowskaz - pomiędzy salami 122 a 121",
+        "svg": "BT-1-D11",
+        "qr": "NN2016DROG-7NKK"
+      }, {
+        "id": 8,
+        "name": "Drogowskaz - obok klatki schodowej (koło sali 123)",
+        "svg": "BT-1-D12",
+        "qr": "NN2016DROG-XN7L"
+      }, {
+        "id": 9,
+        "name": "Drogowskaz - hol pomiędzy WC a salą 123",
+        "svg": "BT-1-D13",
+        "qr": "NN2016DROG-FHGB"
+      }, {
+        "id": 10,
+        "name": "Drogowskaz - korytarz naprzeciw Informatorium",
+        "svg": "BT-1-D14",
+        "qr": "NN2016DROG-D4VV"
+      }, {
+        "id": 11,
+        "name": "Drogowskaz - koło schodów w bibliotece",
+        "svg": "BT-1-D15",
+        "qr": "NN2016DROG-81K5"
+      }, {
+        "id": 12,
+        "name": "Drogowskaz - klatka schodowa koło biblioteki",
+        "svg": "BT-1-D16",
+        "qr": "NN2016DROG-DWWG"
+      }, {
+        "id": 13,
+        "name": "Drogowskaz - klatka schodowa w części nad korytarzem do sali 53",
+        "svg": "BT-1-D17",
+        "qr": "NN2016DROG-RSLT"
+      }]
+    }]
+  }, {
+    "id": 3,
+    "name": "Wydział Budowy Maszyn i Zarządzania",
+    "address": "ul. Piotrowo 3",
+    "abbreviation": "BM",
+    "menu": true,
+    "floors": [{
+      "id": 0,
+      "name": "-1",
+      "svg": "BM-1.svg",
+      "css": "map-bm-1",
+      "rooms": [{
+        "id": 0,
+        "name": "Sala 024",
+        "svg": "sala24"
+      }]
+    }, {
+      "id": 1,
+      "name": "0",
+      "svg": "BM0.svg",
+      "css": "map-bm0",
+      "rooms": [{
+        "id": 0,
+        "name": "Sala 19",
+        "svg": "sala19"
+      }]
+    }]
+  }, {
+    "id": 4,
+    "name": "Wydział Elektryczny",
+    "address": "ul. Piotrowo 3A",
+    "abbreviation": "E",
+    "menu": true,
+    "floors": [{
+      "id": 0,
+      "name": "-1",
+      "svg": "E-1.svg",
+      "css": "map-e-1",
+      "rooms": [{
+        "id": 0,
+        "name": "Łącznik",
+        "svg": "lacznik"
+      }, {
+        "id": 1,
+        "name": "Drogowskaz - lewy",
+        "svg": "E--1-D-11",
+        "qr": "NN2016DROG-9MYC"
+      }, {
+        "id": 2,
+        "name": "Drogowskaz - środkowy",
+        "svg": "E--1-D-12",
+        "qr": "NN2016DROG-SIAU"
+      }, {
+        "id": 3,
+        "name": "Drogowskaz - prawy",
+        "svg": "E--1-D-13",
+        "qr": "NN2016DROG-CIHW"
+      }]
+    }, {
+      "id": 1,
+      "name": "0",
+      "svg": "E0.svg",
+      "css": "map-e0",
+      "rooms": [{
+        "id": 0,
+        "name": "Drogowskaz - lewy",
+        "svg": "E-0-D01",
+        "qr": "NN2016DROG-OGPW"
+      }, {
+        "id": 1,
+        "name": "Drogowskaz - środkowy",
+        "svg": "E-0-D02",
+        "qr": "NN2016DROG-TR1S"
+      }, {
+        "id": 2,
+        "name": "Drogowskaz - prawy",
+        "svg": "E-0-D03",
+        "qr": "NN2016DROG-MH2F"
+      }]
+    }, {
+      "id": 2,
+      "name": "1",
+      "svg": "E1.svg",
+      "css": "map-e1",
+      "rooms": [{
+        "id": 0,
+        "name": "Drogowskaz - lewy",
+        "svg": "E-1-D11",
+        "qr": "NN2016DROG-URDA"
+      }, {
+        "id": 1,
+        "name": "Drogowskaz - środkowy",
+        "svg": "E-1-D12",
+        "qr": "NN2016DROG-N7ZL"
+      }, {
+        "id": 2,
+        "name": "Drogowskaz - prawy",
+        "svg": "E-1-D13",
+        "qr": "NN2016DROG-QAZQ"
+      }]
+    }, {
+      "id": 3,
+      "name": "2",
+      "svg": "E2.svg",
+      "css": "map-e2",
+      "rooms": [{
+        "id": 0,
+        "name": "Drogowskaz - lewy",
+        "svg": "E-2-D21",
+        "qr": "NN2016DROG-725A"
+      }, {
+        "id": 1,
+        "name": "Drogowskaz - środkowy",
+        "svg": "E-2-D22",
+        "qr": "NN2016DROG-HP53"
+      }, {
+        "id": 2,
+        "name": "Drogowskaz - prawy",
+        "svg": "E-2-D23",
+        "qr": "NN2016DROG-FE51"
+      }]
+    }, {
+      "id": 4,
+      "name": "3",
+      "svg": "E3.svg",
+      "css": "map-e3",
+      "rooms": [{
+        "id": 0,
+        "name": "Drogowskaz - lewy",
+        "svg": "E-3-D31",
+        "qr": "NN2016DROG-TSJR"
+      }, {
+        "id": 1,
+        "name": "Drogowskaz - środkowy",
+        "svg": "E-3-D32",
+        "qr": "NN2016DROG-Q4M5"
+      }, {
+        "id": 2,
+        "name": "Drogowskaz - prawy",
+        "svg": "E-3-D33",
+        "qr": "NN2016DROG-2IAF"
+      }]
+    }, {
+      "id": 5,
+      "name": "4",
+      "svg": "E4.svg",
+      "css": "map-e4",
+      "rooms": [{
+        "id": 0,
+        "name": "Laboratorium 424",
+        "svg": "sale424"
+      }, {
+        "id": 1,
+        "name": "Sala 424Y",
+        "svg": "sale424"
+      }, {
+        "id": 2,
+        "name": "Drogowskaz - lewy",
+        "svg": "E-4-D41",
+        "qr": "NN2016DROG-35BF"
+      }, {
+        "id": 3,
+        "name": "Drogowskaz - środkowy",
+        "svg": "E-4-D42",
+        "qr": "NN2016DROG-RZZT"
+      }, {
+        "id": 4,
+        "name": "Drogowskaz - prawy",
+        "svg": "E-4-D43",
+        "qr": "NN2016DROG-N6JM"
+      }]
+    }, {
+      "id": 6,
+      "name": "5",
+      "svg": "E5.svg",
+      "css": "map-e5",
+      "rooms": [{
+        "id": 0,
+        "name": "Laboratorium 516",
+        "svg": "sala516"
+      }, {
+        "id": 1,
+        "name": "Laboratorium 518x",
+        "svg": "sala518x"
+      }, {
+        "id": 2,
+        "name": "Drogowskaz - lewy",
+        "svg": "E-5-D51",
+        "qr": "NN2016DROG-847W"
+      }, {
+        "id": 3,
+        "name": "Drogowskaz - środkowy",
+        "svg": "E-5-D52",
+        "qr": "NN2016DROG-ECV4"
+      }, {
+        "id": 4,
+        "name": "Drogowskaz - prawy",
+        "svg": "E-5-D53",
+        "qr": "NN2016DROG-AEZ8"
+      }]
+    }, {
+      "id": 7,
+      "name": "6",
+      "svg": "E6.svg",
+      "css": "map-e6",
+      "rooms": [{
+        "id": 0,
+        "name": "Sala 612",
+        "svg": "sala612"
+      }, {
+        "id": 1,
+        "name": "Drogowskaz - lewy",
+        "svg": "E-6-D61",
+        "qr": "NN2016DROG-HVUX"
+      }, {
+        "id": 2,
+        "name": "Drogowskaz - środkowy",
+        "svg": "E-6-D62",
+        "qr": "NN2016DROG-TPV6"
+      }, {
+        "id": 3,
+        "name": "Drogowskaz - prawy",
+        "svg": "E-6-D63",
+        "qr": "NN2016DROG-C1CE"
+      }]
+    }]
+  }, {
+    "id": 5,
+    "name": "Kampus Piotrowo",
+    "address": "ul. Piotrowo",
+    "abbreviation": "kampus",
+    "menu": false,
+    "floors": [{
+      "id": 0,
+      "name": "0",
+      "svg": "kampus.svg",
+      "css": "map-kampus",
+      "rooms": [{
+        "id": 0,
+        "name": "Sala 1",
+        "svg": "1"
+      }]
+    }]
+  }, {
+    "id": 6,
+    "name": "Centrum Mechatroniki",
+    "address": "ul. Jana Pawła II",
+    "abbreviation": "CMBIN",
+    "menu": true,
+    "floors": [{
+      "id": 0,
+      "name": "0",
+      "svg": "CMBIN-1.svg",
+      "css": "map-cmbin-1",
+      "rooms": [{
+        "id": 0,
+        "name": "Laboratorium 009",
+        "svg": "laboratorium009"
+      }, {
+        "id": 1,
+        "name": "Drogowskaz - lewy (korytarz)",
+        "svg": "CMBIN--1-D-11",
+        "qr": "NN2016DROG-IREN"
+      }, {
+        "id": 2,
+        "name": "Drogowskaz - środkowy (schody)",
+        "svg": "CMBIN--1-D-12",
+        "qr": "NN2016DROG-HM2Q"
+      }, {
+        "id": 3,
+        "name": "Drogowskaz - prawy (korytarz)",
+        "svg": "CMBIN--1-D-13",
+        "qr": "NN2016DROG-6IEN"
+      }]
+    }, {
+      "id": 1,
+      "name": "1",
+      "svg": "CMBIN0.svg",
+      "css": "map-cmbin0",
+      "rooms": [{
+        "id": 0,
+        "name": "Sala 107",
+        "svg": "sala107"
+      }, {
+        "id": 1,
+        "name": "Sala 108",
+        "svg": "sala108"
+      }, {
+        "id": 2,
+        "name": "Sala 109",
+        "svg": "sala109"
+      }, {
+        "id": 3,
+        "name": "Sala 110",
+        "svg": "sala110"
+      }, {
+        "id": 4,
+        "name": "Drogowskaz - lewy (korytarz)",
+        "svg": "CMBIN-0-D01",
+        "qr": "NN2016DROG-K7B7"
+      }, {
+        "id": 5,
+        "name": "Drogowskaz - środkowy (schody)",
+        "svg": "CMBIN-0-D02",
+        "qr": "NN2016DROG-ASTU"
+      }, {
+        "id": 6,
+        "name": "Drogowskaz - prawy (korytarz)",
+        "svg": "CMBIN-0-D03",
+        "qr": "NN2016DROG-Y94R"
+      }]
+    }, {
+      "id": 2,
+      "name": "2",
+      "svg": "CMBIN1.svg",
+      "css": "map-cmbin1",
+      "rooms": [{
+        "id": 0,
+        "name": "Sala 224",
+        "svg": "sala224"
+      }, {
+        "id": 1,
+        "name": "Sala 225",
+        "svg": "sala225"
+      }, {
+        "id": 2,
+        "name": "Sala 226",
+        "svg": "sala226"
+      }, {
+        "id": 3,
+        "name": "Drogowskaz - lewy (korytarz)",
+        "svg": "CMBIN-1-D11",
+        "qr": "NN2016DROG-CMWG"
+      }, {
+        "id": 4,
+        "name": "Drogowskaz - środkowy (schody)",
+        "svg": "CMBIN-1-D12",
+        "qr": "NN2016DROG-SFMJ"
+      }, {
+        "id": 5,
+        "name": "Drogowskaz - prawy (korytarz)",
+        "svg": "CMBIN-1-D13",
+        "qr": "NN2016DROG-5JM1"
+      }, {
+        "id": 6,
+        "name": "Drogowskaz - koło sali 226 i 225",
+        "svg": "CMBIN-1-D14",
+        "qr": "NN2016DROG-MG39"
+      }]
+    }, {
+      "id": 3,
+      "name": "3",
+      "svg": "CMBIN2.svg",
+      "css": "map-cmbin2",
+      "rooms": [{
+        "id": 0,
+        "name": "Sala 317",
+        "svg": "sala317"
+      }, {
+        "id": 1,
+        "name": "Sala 320",
+        "svg": "sala320"
+      }, {
+        "id": 2,
+        "name": "Drogowskaz - lewy (korytarz)",
+        "svg": "CMBIN-2-D21",
+        "qr": "NN2016DROG-AI2L"
+      }, {
+        "id": 3,
+        "name": "Drogowskaz - środkowy (schody)",
+        "svg": "CMBIN-2-D22",
+        "qr": "NN2016DROG-6TWO"
+      }, {
+        "id": 4,
+        "name": "Drogowskaz - prawy (korytarz)",
+        "svg": "CMBIN-2-D23",
+        "qr": "NN2016DROG-VFTS"
+      }, {
+        "id": 5,
+        "name": "Drogowskaz - koło sali 317",
+        "svg": "CMBIN-2-D24",
+        "qr": "NN2016DROG-VUKA"
+      }]
+    }, {
+      "id": 4,
+      "name": "4",
+      "svg": "CMBIN3.svg",
+      "css": "map-cmbin3",
+      "rooms": [{
+        "id": 0,
+        "name": "Sala 431",
+        "svg": "sala431"
+      }, {
+        "id": 1,
+        "name": "Drogowskaz - lewy (korytarz)",
+        "svg": "CMBIN-3-D31",
+        "qr": "NN2016DROG-8O27"
+      }, {
+        "id": 2,
+        "name": "Drogowskaz - środkowy (schody)",
+        "svg": "CMBIN-3-D32",
+        "qr": "NN2016DROG-H5IV"
+      }, {
+        "id": 3,
+        "name": "Drogowskaz - prawy (korytarz)",
+        "svg": "CMBIN-3-D33",
+        "qr": "NN2016DROG-IRFQ"
+      }]
+    }]
+  }, {
+    "id": 7,
+    "name": "Wydział Technologii Chemicznej",
+    "address": "ul. Berdychowo 4",
+    "abbreviation": "WTCH",
+    "menu": true,
+    "floors": [{
+      "id": 0,
+      "name": "0",
+      "svg": "WTCH0.svg",
+      "css": "map-wtch0",
+      "rooms": [{
+        "id": 0,
+        "name": "Hala Technologiczna",
+        "svg": "HT"
+      }, {
+        "id": 1,
+        "name": "Drogowskaz - hol na wejściu",
+        "svg": "WTCH-0-D01",
+        "qr": "NN2016DROG-O8TX"
+      }, {
+        "id": 2,
+        "name": "Drogowskaz - WC w części C",
+        "svg": "WTCH-0-D02",
+        "qr": "NN2016DROG-WL5K"
+      }, {
+        "id": 3,
+        "name": "Drogowskaz - klatka schodowa lewa w części B",
+        "svg": "WTCH-0-D03",
+        "qr": "NN2016DROG-KZ74"
+      }, {
+        "id": 4,
+        "name": "Drogowskaz - klatka schodowa prawa w części B",
+        "svg": "WTCH-0-D04",
+        "qr": "NN2016DROG-YSM4"
+      }, {
+        "id": 5,
+        "name": "Drogowskaz - klatka schodowa prawa w części A",
+        "svg": "WTCH-0-D05",
+        "qr": "NN2016DROG-HKBC"
+      }]
+    }, {
+      "id": 1,
+      "name": "1",
+      "svg": "WTCH1.svg",
+      "css": "map-wtch1",
+      "rooms": [{
+        "id": 0,
+        "name": "Sala 104B",
+        "svg": "sala104B"
+      }, {
+        "id": 1,
+        "name": "Sala 102C",
+        "svg": "sala102C"
+      }, {
+        "id": 2,
+        "name": "Sala 113A",
+        "svg": "sala113A"
+      }, {
+        "id": 3,
+        "name": "Drogowskaz - klatka schodowa lewa w części B",
+        "svg": "WTCH-1-D11",
+        "qr": "NN2016DROG-TVHZ"
+      }, {
+        "id": 4,
+        "name": "Drogowskaz - klatka schodowa prawa w części B",
+        "svg": "WTCH-1-D12",
+        "qr": "NN2016DROG-IEPY"
+      }, {
+        "id": 5,
+        "name": "Drogowskaz - hol w części C",
+        "svg": "WTCH-1-D13",
+        "qr": "NN2016DROG-56X4"
+      }, {
+        "id": 6,
+        "name": "Drogowskaz - klatka schodowa lewa w części A",
+        "svg": "WTCH-1-D14",
+        "qr": "NN2016DROG-88BK"
+      }, {
+        "id": 7,
+        "name": "Drogowskaz - klatka schodowa prawa w części A",
+        "svg": "WTCH-1-D15",
+        "qr": "NN2016DROG-KKU1"
+      }]
+    }, {
+      "id": 2,
+      "name": "2",
+      "svg": "WTCH2.svg",
+      "css": "map-wtch2",
+      "rooms": [{
+        "id": 0,
+        "name": "Sala 214A",
+        "svg": "sala214A"
+      }, {
+        "id": 1,
+        "name": "Drogowskaz - klatka schodowa lewa w części B",
+        "svg": "WTCH-2-D21",
+        "qr": "NN2016DROG-Z7XG"
+      }, {
+        "id": 2,
+        "name": "Drogowskaz - klatka schodowa prawa w części B",
+        "svg": "WTCH-2-D22",
+        "qr": "NN2016DROG-NPMT"
+      }, {
+        "id": 3,
+        "name": "Drogowskaz - hol w części C",
+        "svg": "WTCH-2-D23",
+        "qr": "NN2016DROG-VY67"
+      }, {
+        "id": 4,
+        "name": "Drogowskaz - klatka schodowa lewa w części A",
+        "svg": "WTCH-2-D24",
+        "qr": "NN2016DROG-LDTS"
+      }, {
+        "id": 5,
+        "name": "Drogowskaz - klatka schodowa prawa w części A",
+        "svg": "WTCH-2-D25",
+        "qr": "NN2016DROG-Y5EC"
+      }]
+    }, {
+      "id": 3,
+      "name": "3",
+      "svg": "WTCH3.svg",
+      "css": "map-wtch3",
+      "rooms": [{
+        "id": 0,
+        "name": "Sala 307B",
+        "svg": "sala307B"
+      }, {
+        "id": 1,
+        "name": "Sala 305C",
+        "svg": "sala305C"
+      }, {
+        "id": 2,
+        "name": "Sala 314A",
+        "svg": "sala314A"
+      }, {
+        "id": 3,
+        "name": "Drogowskaz - klatka schodowa lewa w części B",
+        "svg": "WTCH-3-D31",
+        "qr": "NN2016DROG-TPK3"
+      }, {
+        "id": 4,
+        "name": "Drogowskaz - klatka schodowa prawa w części B",
+        "svg": "WTCH-3-D32",
+        "qr": "NN2016DROG-XM7I"
+      }, {
+        "id": 5,
+        "name": "Drogowskaz - hol w części C",
+        "svg": "WTCH-3-D33",
+        "qr": "NN2016DROG-N33R"
+      }, {
+        "id": 6,
+        "name": "Drogowskaz - klatka schodowa lewa w części A",
+        "svg": "WTCH-3-D34",
+        "qr": "NN2016DROG-YZQ5"
+      }, {
+        "id": 7,
+        "name": "Drogowskaz - klatka schodowa prawa w części A",
+        "svg": "WTCH-3-D35",
+        "qr": "NN2016DROG-M5OG"
+      }]
+    }]
+  }, {
+    "id": 8,
+    "name": "Wydział Inżynierii Zarządzania",
+    "address": "ul. Strzelecka 11",
+    "abbreviation": "WIZ",
+    "menu": false,
+    "floors": []
+  }, {
+    "id": 9,
+    "name": "Wydział Elektroniki i Telekomunikacji",
+    "address": "ul. Polanka 3",
+    "abbreviation": "WEIT",
+    "menu": false,
+    "floors": []
+  }, {
+    "id": 10,
+    "name": "Simword (Gear Up!)",
+    "address": "ul. Kwiatowa 2",
+    "abbreviation": "simword",
+    "menu": false,
+    "floors": []
+  }]
+}

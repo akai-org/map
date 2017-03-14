@@ -3,14 +3,18 @@ define([], function() {
 
   var AppCtrl = (function() {
 
-    function AppCtrl($scope) {
+    function AppCtrl($scope, campuses) {
       this.$scope = $scope;
+
+      this.$scope.campuses = campuses;
+
+      this.$scope.sideNavClosed = false;
+      this.$scope.closeSideNav = angular.bind(this, this.closeSideNav);
+
       $scope.sidenavToggle = angular.bind(this, this.sidenavToggle);
     }
 
     AppCtrl.prototype.sidenavToggle = function () {
-      // var elem = $($event.currentTarget) || $($event.srcElement);
-      // elem.parent().toggleClass('active');
       angular.element('.side-nav').toggleClass('active');
     };
 
