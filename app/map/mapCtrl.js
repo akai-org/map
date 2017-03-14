@@ -21,14 +21,12 @@ define([], function() {
 
     MapCtrl.prototype.initializeMap = function () {
       var campusId = this.$stateParams.campus;
-      var campus = this.campuses.filter(function(c) {
-        return c.id === campusId;
-      });
+      var campus = this.campuses[campusId || 'piotrowo'];
 
       this.$scope.center = {
-        lat: campus[0].coords[0],
-        lng: campus[0].coords[1],
-        zoom: 17
+        lat: campus.coords[0],
+        lng: campus.coords[1],
+        zoom: campus.zoom
       };
 
       this.$scope.markers = [];
