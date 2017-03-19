@@ -1,7 +1,7 @@
 .top-bar {
   width: 100%;
   background-color: $white;
-
+  
   &--menu {
     display: inline-block;
     padding: 20px 10px 20px 30px;
@@ -39,6 +39,10 @@
   }
 }
 
-.landing-page-hamburger{
+.landing-page--menu {
   position: absolute;
+
+  &-icon {
+    fill: $white;
+  }
 }
