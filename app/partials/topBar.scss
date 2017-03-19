@@ -2,20 +2,19 @@
   width: 100%;
   background-color: $white;
 
-  &--menu-icon {
-    font-family: "FontAwesome";
-    font-size: 24px;
-    text-decoration: none;
-    color: #aeaeae;
+  &--menu {
     display: inline-block;
     padding: 20px 10px 20px 30px;
+    vertical-align: middle;
     background: none;
     border: none;
     cursor: pointer;
     outline: none;
 
-    &:after {
-      content: "\f0c9";
+    &-icon {
+      fill: $light-grey;
+      height: 30px;
+      width: 30px;
     }
   }
 
@@ -39,6 +38,7 @@
     color: #aeaeae;
   }
 }
+
 .landing-page-hamburger{
   position: absolute;
 }
