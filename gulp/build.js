@@ -6,7 +6,6 @@ require('./clean');
 require('./bower');
 require('./jshint');
 require('./html');
-require('./css');
 require('./js');
 require('./libs');
 require('./sass');
@@ -14,9 +13,9 @@ require('./images');
 
 var build = function(debug, callback) {
   if (debug) {
-    runSequence('clean', 'bower', 'jshint', 'getJson', ['libs', 'html', 'css', 'js:dev', 'images:dev'], callback);
+    runSequence('clean', 'bower', 'jshint', 'getJson', ['libs', 'html', 'sass', 'js:dev', 'images:dev'], callback);
   } else {
-    runSequence('clean', 'bower', 'jshint', 'getJson', ['libs', 'html', 'css', 'js:prod', 'images:prod'], callback);
+    runSequence('clean', 'bower', 'jshint', 'getJson', ['libs', 'html', 'sass', 'js:prod', 'images:prod'], callback);
   }
 };
 

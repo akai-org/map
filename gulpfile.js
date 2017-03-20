@@ -4,7 +4,6 @@ require('./gulp/clean');
 require('./gulp/bower');
 require('./gulp/jshint');
 require('./gulp/html');
-require('./gulp/css');
 require('./gulp/sass');
 require('./gulp/js');
 require('./gulp/libs');
