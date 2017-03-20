@@ -17,6 +17,7 @@
   "homepage": "https://github.com/akai-org/map#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-bower": "0.0.13",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.0.0",

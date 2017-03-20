@@ -14,9 +14,9 @@ require('./images');
 
 var build = function(debug, callback) {
   if (debug) {
-    runSequence('clean', 'bower', 'jshint', 'getJson', ['libs', 'html', 'sass', 'css', 'js:dev', 'images:dev'], callback);
+    runSequence('clean', 'bower', 'jshint', 'getJson', ['libs', 'html', 'css', 'js:dev', 'images:dev'], callback);
   } else {
-    runSequence('clean', 'bower', 'jshint', 'getJson', ['libs', 'html', 'sass', 'css', 'js:prod', 'images:prod'], callback);
+    runSequence('clean', 'bower', 'jshint', 'getJson', ['libs', 'html', 'css', 'js:prod', 'images:prod'], callback);
   }
 };
 
