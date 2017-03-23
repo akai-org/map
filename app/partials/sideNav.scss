@@ -2,14 +2,14 @@
   opacity: 0;
   width: 300px;
   box-sizing: border-box;
-  padding: 25px 50px;
-  background-color: #f7f7f7;
+  padding: 20px 30px 25px 50px;
+  background-color: $white;
   position: fixed;
   top: 0;
   left: -300px;
   min-height: 100vh;
   z-index: 10;
-  box-shadow: 10px 0px 100px black;
+  box-shadow: 10px 0px 50px $mid-grey;
   transition: opacity 0.5s, left 0.5s;
 
   &.active {
@@ -17,20 +17,17 @@
     left: 0;
   }
 
-
-&--close-icon {
-    font-family: "FontAwesome";
-    font-size: 24px;
-    text-decoration: none;
+  &--close {
     float: right;
-    color: #515151;
     cursor: pointer;
     border: none;
     background: none;
     outline: none;
 
-    &:after {
-      content: "\f00d";
+    &-icon {
+      fill: $light-grey;
+      width: 28px;
+      height: 28px;
     }
   }
 
@@ -77,17 +74,17 @@
     margin: 10px 20px 10px 0px;
 
     &[href*="facebook"]:before {
-      font-size: 48px;
+      font-size: 42px;
       color: #3c5a96;
       content: "\f230";
     }
     &[href*="twitter"]:before {
-      font-size: 48px;
+      font-size: 42px;
       color: #34aade;
       content: "\f099";
     }
     &[href*="github"]:before {
-      font-size: 48px;
+      font-size: 42px;
       color: #000;
       content: "\f09b";
     }
