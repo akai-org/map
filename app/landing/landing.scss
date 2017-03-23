@@ -3,76 +3,128 @@ body {
 }
 
 .landing {
-  height: 100vh;
-  text-align: center;
-  background-image: url('../img/background.jpg');
-  background-position: center;
-  background-size: cover;
 
-  &--container {
-    display: inline-block;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+  &--search {
+    height: 100vh;
+    text-align: center;
+    background-image: url('../img/background.jpg');
+    background-position: center;
+    background-size: cover;
 
-  &--title {
-    font-size: 2.2em;
-    font-weight: 600;
-    color: $white;
-  }
-
-  &--searchbox {
-    display: block;
-    margin: 20px 0;
-    border-radius: 4px;
-    box-shadow: 0px 3px 15px #222;
-    font-size: 0;
-
-    &--input {
-      margin: 0;
-      padding: 0 16px;
-      width: 300px;
-      height: 44px;
-      border: none;
-      border-radius: 4px 0 0 4px;
-      background-color: $white;
-      font-size: initial;
-      color: $mid-grey;
-      vertical-align: bottom;
+    &--container {
+      display: inline-block;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
-    &--button {
-      margin-left: 0;
-      padding: 0;
-      height: 44px;
-      width: 44px;
-      border: none;
-      border-radius: 0 4px 4px 0;
-      background-color: $primary-blue;
-      cursor: pointer;
+    &--title {
+      font-size: 2.2em;
+      font-weight: 600;
+      color: $white;
+    }
 
-      &--icon {
-        fill: $white;
-        width: 28px;
-        height: 28px;
-        margin-left: 4px;
-        margin-top: 2px;
+    &--searchbox {
+      display: block;
+      margin: 20px 0;
+      border-radius: 4px;
+      box-shadow: 0px 3px 15px #222;
+      font-size: 0;
+
+      &--input {
+        margin: 0;
+        padding: 0 16px;
+        width: 300px;
+        height: 44px;
+        border: none;
+        border-radius: 4px 0 0 4px;
+        background-color: $white;
+        font-size: initial;
+        color: $mid-grey;
+        vertical-align: bottom;
+      }
+
+      &--button {
+        margin-left: 0;
+        padding: 0;
+        height: 44px;
+        width: 44px;
+        border: none;
+        border-radius: 0 4px 4px 0;
+        background-color: $primary-blue;
+        cursor: pointer;
+
+        &--icon {
+          fill: $white;
+          width: 28px;
+          height: 28px;
+          margin-left: 4px;
+          margin-top: 2px;
+        }
+      }
+    }
+
+    &--links {
+      text-align: center;
+    }
+
+    &--link {
+      font-size: 1.2em;
+      text-decoration: none;
+      color: $white;
+
+      .strong {
+        font-weight: 700;
       }
     }
   }
 
-  &--links {
-    text-align: center;
+  &--about {
+    background: $white;
+    padding-top: 64px;
+
+    &--text-big {
+      font-size: 16px;
+      line-height: 24px;
+      color: $mid-grey;
+      width: 45%;
+      margin-bottom: 64px;
+    }
+
+    &--3columns {
+      display: flex;
+      justify-content: space-between;
+
+      &--col {
+        width: 30%;
+      }
+    }
   }
 
-  &--link {
-    font-size: 1.2em;
-    text-decoration: none;
-    color: $white;
+  &--team {
+    background: $white;
+    padding-top: 64px;
+  }
 
-    .strong {
-      font-weight: 700;
-    }
+  &--container {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  &--title {
+    font-weight: 600;
+    font-size: 24px;
+    color: $dark-grey;
+    margin-bottom: 40px;
+  }
+
+  &--small-title {
+    color: $light-grey;
+    text-transform: uppercase;
+  }
+
+  &--text {
+    color: $mid-grey;
+    text-align: justify;
   }
 }
