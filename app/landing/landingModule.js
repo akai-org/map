@@ -2,9 +2,10 @@ define(['./landingPageCtrl'],
        function(LandingPageCtrl) {
   'use strict';
 
-  var landingModule = angular.module('landing-module', ['ui.router']);
+  var landingModule = angular.module('landing-module', ['ui.router',
+                                                        'algoliasearch']);
 
-  landingModule.controller('landingPageCtrl', ['$scope', LandingPageCtrl]);
+  landingModule.controller('landingPageCtrl', ['$scope', '$state', 'algolia', LandingPageCtrl]);
 
   landingModule.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $stateProvider

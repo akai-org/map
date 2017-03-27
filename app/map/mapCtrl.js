@@ -132,6 +132,17 @@ define([], function() {
         data: this.$scope.buildings,
         style: angular.bind(this, this.getStyle)
       };
+      if (this.$stateParams.buildingsId) {
+        var buildingId = this.$stateParams.buildingsId;
+        this.$scope.geojson.data.features = this.$scope.geojson.data.features.map(function(b) {
+          if (b.id === buildingId) {
+            b.properties.show = true;
+          } else {
+            b.properties.show = false;
+          }
+          return b;
+        });
+      }
     };
 
     MapCtrl.prototype.getBuildingsDataErrorHandler = function(error) {

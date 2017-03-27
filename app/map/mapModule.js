@@ -11,6 +11,9 @@ define(['./mapCtrl'],
        $stateProvider
           .state('map', {
             url: '/map/:campus',
+            params: {
+              buildingsId: null
+            },
             controller: 'MapCtrl',
             templateUrl: 'html/map/map.html'
           });
