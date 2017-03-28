@@ -74,6 +74,14 @@ define([], function() {
       this.buildingClick(args.leafletObject.feature, args.leafletEvent);
       this.showBuildingDetails(args.leafletObject.feature);
       this.centerMap(args.leafletEvent.latlng);
+      var marker = {};
+      marker.lat = args.leafletEvent.latlng.lat;
+      marker.lng = args.leafletEvent.latlng.lng;
+      // this.$scope.markers.push(marker);
+      console.log('"lng": ' + marker.lng + ', "lat": ' + marker.lat);
+      // for (var i=0; i<this.$scope.markers.length; i++) {
+      //   console.log('[' + this.$scope.markers[i].lng + ', ' + this.$scope.markers[i].lat + "],");
+      // }
     };
 
     MapCtrl.prototype.buildingClick = function(feature, leafletEvent) {
