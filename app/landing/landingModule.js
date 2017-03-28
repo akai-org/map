@@ -5,7 +5,7 @@ define(['./landingPageCtrl'],
   var landingModule = angular.module('landing-module', ['ui.router',
                                                         'algoliasearch']);
 
-  landingModule.controller('landingPageCtrl', ['$scope', '$state', 'algolia', LandingPageCtrl]);
+  landingModule.controller('landingPageCtrl', ['$scope', '$state', '$rootScope', 'algolia', LandingPageCtrl]);
 
   landingModule.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $stateProvider

@@ -15,11 +15,14 @@
       <a class="landing--link" ui-sref="map">Przejdź do <span class="strong">mapy</span></a>
       <!-- <a class="landing--link" ui-sref="buildings" ng-bind="btnBuildings"></a> -->
     </div>
-    <div class="" ng-if="search.hits.length > 0" style="position: fixed; top: 185px; width: 376px; height: 150px; background-color: white; border: 1px solid black; border-radius: 4px;">
-      <div class="search" id="search" style="position:relative; height: 100%; overflow: auto;">
-        <p style="cursor: pointer;" ng-repeat="hit in search.hits" ng-click="selectOption(hit)">{{hit.properties.name}}</p>
+    <div class="landing--autocomplete">
+      <div class="autocomplete--results">
+        <p class="autocomplete--result"
+           ng-repeat="result in search.results"
+           ng-click="selectOption(result)"
+           ng-bind="result.properties.name">
+         </p>
       </div>
-
     </div>
   </div>
 </div>

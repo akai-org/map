@@ -3,9 +3,10 @@ define([], function() {
 
   var LandingPageCtrl = (function() {
 
-    function LandingPageCtrl($scope, $state, algolia) {
+    function LandingPageCtrl($scope, $state, $rootScope, algolia) {
       this.$scope = $scope;
       this.$state = $state;
+      this.$rootScope = $rootScope;
       this.algolia = algolia;
       this.$scope.btnMap = "Przejdź do mapy";
       this.$scope.btnBuildings = "Przejdź do spisu budynkow";
@@ -16,12 +17,6 @@ define([], function() {
 
       this.$scope.search = angular.bind(this, this.search);
       this.$scope.selectOption = angular.bind(this, this.selectOption);
-
-      var a = angular.element('#search');
-      console.log(a);
-      angular.element('#search').perfectScrollbar({
-        suppressScrollX: true
-      });
 
       this.$scope.$watch('query', angular.bind(this, this.watchQuery));
     }
@@ -37,12 +32,10 @@ define([], function() {
     };
 
     LandingPageCtrl.prototype.searchSuccessHandler = function(response) {
-      console.log(response);
-      this.$scope.search.hits = response.hits;
-      angular.element('#search').perfectScrollbar({
+      this.$scope.search.results = response.hits;
+      angular.element('.autocomplete--results').perfectScrollbar({
         suppressScrollX: true
       });
-      // angular.element('#search').perfectScrollbar('update');
     };
 
     LandingPageCtrl.prototype.searchErrorHandler = function(error) {
@@ -50,12 +43,12 @@ define([], function() {
     };
 
     LandingPageCtrl.prototype.watchQuery = function(newValue, oldValue) {
-      if (newValue) {
-        this.search(newValue);
-      } else {
-        delete this.$scope.search.hits;
-        return;
-      }
+      // if (newValue) {
+      //   this.search(newValue);
+      // } else {
+      //   delete this.$scope.search.hits;
+      //   return;
+      // }
     }
 
     LandingPageCtrl.prototype.selectOption = function(hit) {

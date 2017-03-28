@@ -45,3 +45,8 @@ body {
     margin: 0 10%;
   }
 }
+
+//CSS for perfect scrollbar
+.ps-container > .ps-scrollbar-y-rail {
+  opacity: 0.6 !important;
+}
