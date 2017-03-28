@@ -19,7 +19,7 @@
       <div class="autocomplete--results">
         <p class="autocomplete--result"
            ng-repeat="result in search.results"
-           ng-click="selectOption(result)"
+           ng-click="showResultOnMap(result)"
            ng-bind="result.properties.name">
          </p>
       </div>

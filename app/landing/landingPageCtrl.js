@@ -16,9 +16,9 @@ define([], function() {
       this.index = this.buildings.initIndex('Polimapa');
 
       this.$scope.search = angular.bind(this, this.search);
-      this.$scope.selectOption = angular.bind(this, this.selectOption);
+      this.$scope.showResultOnMap = angular.bind(this, this.showResultOnMap);
 
-      this.$scope.$watch('query', angular.bind(this, this.watchQuery));
+      this.$scope.$watch('query', angular.bind(this, this.watchSearchQuery));
     }
 
     LandingPageCtrl.prototype.initialize = function() {
@@ -42,7 +42,7 @@ define([], function() {
       console.log(error);
     };
 
-    LandingPageCtrl.prototype.watchQuery = function(newValue, oldValue) {
+    LandingPageCtrl.prototype.watchSearchQuery = function(newValue, oldValue) {
       // if (newValue) {
       //   this.search(newValue);
       // } else {
@@ -51,12 +51,13 @@ define([], function() {
       // }
     }
 
-    LandingPageCtrl.prototype.selectOption = function(hit) {
+    LandingPageCtrl.prototype.showResultOnMap = function(result) {
       var params = {
-        campus: hit.properties.campus,
-        buildingsId: hit.id
+        campus: result.properties.campus,
+        buildingsId: result.id
       }
-      this.$state.go('map', {campus: hit.properties.campus, buildingsId: hit.id});
+      // this.$state.go('map', {campus: result.properties.campus, buildingsId: result.id});
+      this.$state.go('map', params);
     }
 
     return LandingPageCtrl;
