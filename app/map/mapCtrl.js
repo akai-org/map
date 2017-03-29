@@ -8,7 +8,6 @@ define([], function() {
       this.$http = $http;
       this.$stateParams = $stateParams;
       this.campuses = campuses;
-      console.log($stateParams);
 
       this.$scope.closeBuildingPanel = angular.bind(this, this.closeBuildingPanel);
 

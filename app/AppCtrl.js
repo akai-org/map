@@ -8,9 +8,6 @@ define([], function() {
       this.$rootScope = $rootScope;
       this.$scope.campuses = campuses;
 
-      this.$scope.sideNavClosed = false;
-      this.$scope.closeSideNav = angular.bind(this, this.closeSideNav);
-
       $scope.sidenavToggle = angular.bind(this, this.sidenavToggle);
     }
 
