@@ -8,7 +8,7 @@ define([], function() {
       this.$state = $state;
       this.$rootScope = $rootScope;
       this.searchService = searchService;
-      
+
       this.$scope.btnMap = "Przejdź do mapy";
       this.$scope.btnBuildings = "Przejdź do spisu budynkow";
       this.$scope.query = '';
@@ -48,7 +48,9 @@ define([], function() {
     LandingPageCtrl.prototype.showResultOnMap = function(result) {
       var params = {
         campus: result.properties.campus,
-        buildingsId: result.id
+        building: result
+        // buildingsId: result.id,
+        // coords: result.properties.coords
       };
       this.$state.go('map', params);
     };

@@ -15,8 +15,6 @@ define([], function() {
       this.getBuildingsData();
       this.initializeMap();
 
-      this.$scope.goInside = angular.bind(this, this.goInside);
-
       $scope.$on('leafletDirectiveMap.map.click', angular.bind(this, this.clickMapListener));
       $scope.$on('leafletDirectiveGeoJson.map.click', angular.bind(this, this.buildingClickListener));
     }
@@ -52,16 +50,6 @@ define([], function() {
     //   }
     // };
 
-    MapCtrl.prototype.goInside = function(event, args) {
-      console.log(args);
-      console.log("cloc");
-      // this.$scope.geojson.data.features = this.$scope.geojson.data.features.map(function(b) {
-      //   b.properties.show = false;
-      //   return b;
-      // });
-      // delete this.$scope.selected;
-    };
-
     MapCtrl.prototype.clickMapListener = function(event, args) {
       this.$scope.geojson.data.features = this.$scope.geojson.data.features.map(function(b) {
         b.properties.show = false;
@@ -71,27 +59,15 @@ define([], function() {
     };
 
     MapCtrl.prototype.buildingClickListener = function(event, args) {
-      this.buildingClick(args.leafletObject.feature, args.leafletEvent);
+      this.buildingClick(args.leafletObject.feature.id);
       this.showBuildingDetails(args.leafletObject.feature);
       this.centerMap(args.leafletEvent.latlng);
-      var marker = {};
-      marker.lat = args.leafletEvent.latlng.lat;
-      marker.lng = args.leafletEvent.latlng.lng;
-      // this.$scope.markers.push(marker);
-      console.log('"lng": ' + marker.lng + ', "lat": ' + marker.lat);
-      // for (var i=0; i<this.$scope.markers.length; i++) {
-      //   console.log('[' + this.$scope.markers[i].lng + ', ' + this.$scope.markers[i].lat + "],");
-      // }
     };
 
-    MapCtrl.prototype.buildingClick = function(feature, leafletEvent) {
-      this.$scope.geojson.data.features = this.$scope.geojson.data.features.map(function(b) {
-        if (b.id === feature.id) {
-          b.properties.show = true;
-        } else {
-          b.properties.show = false;
-        }
-        return b;
+    MapCtrl.prototype.buildingClick = function(buildingId) {
+      this.$scope.geojson.data.features = this.$scope.geojson.data.features.map(function(building) {
+        building.properties.show = building.id === buildingId;
+        return building;
       });
     };
 
@@ -140,16 +116,11 @@ define([], function() {
         data: this.$scope.buildings,
         style: angular.bind(this, this.getStyle)
       };
-      if (this.$stateParams.buildingsId) {
-        var buildingId = this.$stateParams.buildingsId;
-        this.$scope.geojson.data.features = this.$scope.geojson.data.features.map(function(b) {
-          if (b.id === buildingId) {
-            b.properties.show = true;
-          } else {
-            b.properties.show = false;
-          }
-          return b;
-        });
+      if (this.$stateParams.building) {
+        var building = this.$stateParams.building;
+        this.buildingClick(building.id);
+        this.centerMap(building.properties.coords);
+        this.showBuildingDetails(building);
       }
     };
 
