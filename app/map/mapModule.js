@@ -12,9 +12,8 @@ define(['./mapCtrl'],
           .state('map', {
             url: '/map/:campus',
             params: {
-              building: undefined
-              // buildingsId: undefined,
-              // coords: undefined
+              buildingId: undefined,
+              roomId: undefined
             },
             controller: 'MapCtrl',
             templateUrl: 'html/map/map.html'

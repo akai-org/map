@@ -37,20 +37,20 @@ define([], function() {
     };
 
     LandingPageCtrl.prototype.watchSearchQuery = function(newValue, oldValue) {
-      // if (newValue) {
-      //   this.search(newValue);
-      // } else {
-      //   delete this.$scope.search.hits;
-      //   return;
-      // }
+      if (newValue) {
+        this.search(newValue);
+      } else {
+        delete this.$scope.search.results;
+        return;
+      }
     };
 
     LandingPageCtrl.prototype.showResultOnMap = function(result) {
       var params = {
-        campus: result.properties.campus,
-        building: result
-        // buildingsId: result.id,
-        // coords: result.properties.coords
+        campus: result.campus,
+        buildingId: result.buildingId,
+        roomId: result.roomId
+        // building: result
       };
       this.$state.go('map', params);
     };

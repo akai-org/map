@@ -115,11 +115,14 @@ define([], function() {
         data: this.$scope.buildings,
         style: angular.bind(this, this.getStyle)
       };
-      if (this.$stateParams.building) {
-        var building = this.$stateParams.building;
-        this.buildingClick(building.id);
-        this.centerMap(building.properties.coords);
-        this.showBuildingDetails(building);
+      if (this.$stateParams.buildingId) {
+        var buildingId = this.$stateParams.buildingId;
+        var building = this.$scope.buildings.features.filter(function(b) {
+          return b.id === buildingId;
+        });
+        this.buildingClick(building[0].id);
+        this.centerMap(building[0].properties.coords);
+        this.showBuildingDetails(building[0]);
       }
     };
 

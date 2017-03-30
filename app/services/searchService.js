@@ -7,7 +7,8 @@ define([], function() {
       if (this instanceof SearchService) {
         this.algolia = algolia;
         this.buildings = this.algolia.Client('89DSILI2XZ', '50296fbfabeed6e3403020f384654289');
-        this.index = this.buildings.initIndex('Polimapa');
+        // this.index = this.buildings.initIndex('Polimapa');
+        this.index = this.buildings.initIndex('Polimapa_v2');
       } else {
         return new SearchService(algolia);
       }
