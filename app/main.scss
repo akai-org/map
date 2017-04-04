@@ -24,14 +24,12 @@ body {
   cursor: pointer;
   outline: none;
 
-  &--blue {
+  &__blue {
     background-color: $primary-blue;
-    border: 1px solid $primary-blue-dark;
     color: white;
 
     &:hover {
       background-color: $primary-blue-dark;
-      border-color: darken($primary-blue-dark, 10%);
       color: $white;
     }
 
@@ -41,7 +39,7 @@ body {
     }
   }
 
-  &--big {
+  &__big {
     width: 80%;
     margin: 0 10%;
   }

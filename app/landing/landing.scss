@@ -99,11 +99,29 @@ body {
         width: 30%;
       }
     }
+
+    &--repo {
+      &--btn {
+        margin-top: 16px;
+      }
+    }
   }
 
   &--team {
     background: $white;
     padding-top: 64px;
+
+    &--akai {
+      width: 38%;
+      margin-top: 0;
+      margin-bottom: 50px;
+      display: inline-block;
+
+      &--logo {
+        margin-left: 20px;
+        display: inline-block;
+      }
+    }
   }
 
   &--container {
