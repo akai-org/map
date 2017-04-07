@@ -105,22 +105,82 @@ body {
         margin-top: 16px;
       }
     }
+
+    &--icon {
+      width: 20%;
+      margin: 0 5px;
+      display: inline-block;
+    }
   }
 
   &--team {
     background: $white;
     padding-top: 64px;
+    padding-bottom: 24px;
 
     &--akai {
-      width: 38%;
+      width: 35%;
       margin-top: 0;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
       display: inline-block;
 
       &--logo {
         margin-left: 20px;
         display: inline-block;
       }
+    }
+
+    &--members {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: stretch;
+      margin-bottom: 50px;
+
+      &--member {
+        margin: 20px 0;
+        width: 50%;
+        display: flex;
+        align-items: center;
+
+        &--photo {
+          width: 120px;
+          border-radius: 50%;
+        }
+
+        &--decription {
+
+          &--name {
+            color: $mid-grey;
+            font-size: 1.2em;
+            font-weight: 600;
+            margin: 5px 20px;
+          }
+
+          &--function {
+            font-weight: 700;
+            color: $light-grey;
+            text-transform: uppercase;
+            margin: 5px 20px;
+          }
+        }
+
+      }
+    }
+  }
+
+  &--footer {
+    background-image: url('../img/background.jpg');
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+
+    &--description {
+      color: $white;
+      font-weight: 700;
+      font-size: 0.8em;
+      text-transform: uppercase;
+      margin: 0;
+      padding: 40px 0;
     }
   }
 
