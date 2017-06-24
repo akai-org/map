@@ -48,3 +48,9 @@
     fill: $white;
   }
 }
+
+.autocomplete--results {
+  position: absolute;
+  z-index: 1000;
+  background: #f7f7f7;
+}
