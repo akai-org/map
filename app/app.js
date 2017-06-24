@@ -43,6 +43,11 @@ require([
         name: 'Kampus Strzelecka',
         coords: [52.4047467, 16.9330464],
         zoom: 20
+      },
+      'wilda': {
+        name: 'Rektorat',
+        coords: [52.4047467, 16.9330464],
+        zoom: 20
       }
     });
 
