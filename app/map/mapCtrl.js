@@ -11,7 +11,7 @@ define([], function() {
 
       this.$scope.closeBuildingPanel = angular.bind(this, this.closeBuildingPanel);
 
-      this.getBuildingsData();
+      // this.getBuildingsData();
       this.initializeMap();
 
       $scope.$on('leafletDirectiveMap.map.click', angular.bind(this, this.clickMapListener));
@@ -39,36 +39,37 @@ define([], function() {
     };
 
     //example how add to normal map click eventListener and get geolocation data
+    MapCtrl.prototype.clickMapListener = function(event, args) {
+      var marker = {};
+      marker.lat = args.leafletEvent.latlng.lat;
+      marker.lng = args.leafletEvent.latlng.lng;
+      this.$scope.markers.push(marker);
+      console.log("====");
+      for (var i=0; i<this.$scope.markers.length; i++) {
+        console.log('[' + this.$scope.markers[i].lng + ', ' + this.$scope.markers[i].lat + "],");
+      }
+    };
+
     // MapCtrl.prototype.clickMapListener = function(event, args) {
-    //   var marker = {};
-    //   marker.lat = args.leafletEvent.latlng.lat;
-    //   marker.lng = args.leafletEvent.latlng.lng;
-    //   this.$scope.markers.push(marker);
-    //   for (var i=0; i<this.$scope.markers.length; i++) {
-    //     console.log('[' + this.$scope.markers[i].lng + ', ' + this.$scope.markers[i].lat + "],");
-    //   }
+    //   this.$scope.geojson.data.features = this.$scope.geojson.data.features.map(function(b) {
+    //     b.properties.show = false;
+    //     return b;
+    //   });
+    //   delete this.$scope.selected;
     // };
 
-    MapCtrl.prototype.clickMapListener = function(event, args) {
-      this.$scope.geojson.data.features = this.$scope.geojson.data.features.map(function(b) {
-        b.properties.show = false;
-        return b;
-      });
-      delete this.$scope.selected;
-    };
-
-    MapCtrl.prototype.buildingClickListener = function(event, args) {
-      this.buildingClick(args.leafletObject.feature.id);
-      this.showBuildingDetails(args.leafletObject.feature);
-      this.centerMap(args.leafletEvent.latlng);
-    };
-
-    MapCtrl.prototype.buildingClick = function(buildingId) {
-      this.$scope.geojson.data.features = this.$scope.geojson.data.features.map(function(building) {
-        building.properties.show = building.id === buildingId;
-        return building;
-      });
-    };
+    // MapCtrl.prototype.buildingClickListener = function(event, args) {
+    //   this.buildingClick(args.leafletObject.feature.id);
+    //   this.showBuildingDetails(args.leafletObject.feature);
+    //   this.centerMap(args.leafletEvent.latlng);
+    // };
+    //
+    // MapCtrl.prototype.buildingClick = function(buildingId) {
+    //   this.$scope.geojson.data.features = this.$scope.geojson.data.features.map(function(building) {
+    //     building.properties.show = building.id === buildingId;
+    //     return building;
+    //   });
+    // };
 
     MapCtrl.prototype.getStyle = function(feature) {
       if (feature.properties.show) {
@@ -102,12 +103,12 @@ define([], function() {
       this.$scope.center.lng = position.lng;
     };
 
-    MapCtrl.prototype.getBuildingsData = function() {
-      var jsonFileUrl = 'resources/json/buildings-data.json';
-      var successHandler = angular.bind(this, this.getBuildingsDataSuccessHandler);
-      var errorHanlder = angular.bind(this, this.getBuildingsDataErrorHandler);
-      this.$http.get(jsonFileUrl).then(successHandler, errorHanlder);
-    };
+    // MapCtrl.prototype.getBuildingsData = function() {
+    //   var jsonFileUrl = 'resources/json/buildings-data.json';
+    //   var successHandler = angular.bind(this, this.getBuildingsDataSuccessHandler);
+    //   var errorHanlder = angular.bind(this, this.getBuildingsDataErrorHandler);
+    //   this.$http.get(jsonFileUrl).then(successHandler, errorHanlder);
+    // };
 
     MapCtrl.prototype.getBuildingsDataSuccessHandler = function(response) {
       this.$scope.buildings = response.data;
