@@ -90,15 +90,15 @@ define([], function() {
     MapCtrl.prototype.getStyle = function(feature) {
       if (feature.properties.show) {
         return {
-            fillColor: 'blue',
+            fillColor: "rgba(30,90,255,0.5)",//'blue',
             weight: 2,
-            opacity: 1,
+            opacity: 0.4,
             color: 'darkblue',
-            fillOpacity: 0.6
+            fillOpacity: 0.8
         };
       } else {
         return {
-            opacity: 0.2,
+            opacity: 0.15,
             fillOpacity: 0
         };
       }
