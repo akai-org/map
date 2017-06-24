@@ -8,8 +8,11 @@
         </svg>
       </button>
 
-      <h4 class="side-nav--section-header">Przejdź do</h4>
-      <a ui-sref="map({ campus: id })" class="side-nav--link" ng-repeat="(id, campus) in campuses" ng-bind="campus.name"></a>
+  <h4 class="side-nav--section-header">Przejdź do</h4>
+  <a class="side-nav--link"
+     ui-sref="map({ campus: id })"
+     ng-repeat="(id, campus) in campuses"
+     ng-bind="campus.name"></a>
 
       <h4 class="side-nav--section-header">Informacje</h4>
       <a href="#!" class="side-nav--link">O aplikacji</a>

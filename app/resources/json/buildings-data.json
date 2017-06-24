@@ -5,11 +5,16 @@
       "type": "Feature",
       "id": 1,
       "properties": {
+        "campus" : "piotrowo",
         "name": "Biblioteka Techniczna",
         "address": "Piotrowo 2, 60-101 Poznań",
         "link": "library.put.poznan.pl",
         "phone": "61 665 35 19",
-        "show": false
+        "show": false,
+        "coords": {
+          "lng": 16.94915771484375,
+          "lat": 52.403505461495115
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -27,11 +32,16 @@
       "type": "Feature",
       "id": 2,
       "properties": {
+        "campus": "piotrowo",
         "name": "Centrum Wykładowe",
         "address": "Piotrowo 2, 60-965 Poznań",
         "link": "put.poznan.pl",
         "phone": "61 665 29 10",
-        "show": false
+        "show": false,
+        "coords": {
+          "lng": 16.949586868286133,
+          "lat": 52.40410765510206
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -58,8 +68,13 @@
       "type": "Feature",
       "id": 3,
       "properties": {
+        "campus": "piotrowo",
         "name": "Jakieś coś",
-        "show": false
+        "show": false,
+        "coords": {
+          "lng": 16.95167899131775,
+          "lat": 52.403079993665344
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -76,11 +91,16 @@
       "type": "Feature",
       "id": 4,
       "properties": {
+        "campus": "piotrowo",
         "name": "Hala sportowa",
         "address": "Piotrowo 4, 61-138 Poznań",
         "link": "swfis.put.poznan.pl",
         "phone": "61 665 25 17",
-        "show": false
+        "show": false,
+        "coords": {
+          "lng": 16.947827339172363,
+          "lat": 52.402746162187796
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -97,11 +117,16 @@
       "type": "Feature",
       "id": 5,
       "properties": {
+        "campus": "piotrowo",
         "name": "Wydział maszyn roboczych i transportu",
         "address": "Piotrowo 3, 60-965 Poznań",
         "link": "wbmiz.put.poznan.pl",
         "phone": "61 665 23 60",
-        "show": false
+        "show": false,
+        "coords": {
+          "lng": 16.950852870941162,
+          "lat": 52.40228141219924
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -134,10 +159,15 @@
       "type": "Feature",
       "id": 6,
       "properties": {
+        "campus": "piotrowo",
         "name": "Wydział elektryczny",
         "address": "Piotrowo 3a, 60-101 Poznań",
         "link": "fc.put.poznan.pl",
-        "show": false
+        "show": false,
+        "coords": {
+          "lng": 16.951292753219604,
+          "lat": 52.4019017536459
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -154,8 +184,13 @@
       "type": "Feature",
       "id": 7,
       "properties": {
+        "campus": "piotrowo",
         "name": "Wydział budownictwa i inżynierii środowiska",
-        "show": false
+        "show": false,
+        "coords": {
+          "lng": 16.949951648712158,
+          "lat": 52.401004960987244
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -176,8 +211,13 @@
       "type": "Feature",
       "id": 8,
       "properties": {
+        "campus": "piotrowo",
         "name": "Wydział technologii chemicznej",
-        "show": false
+        "show": false,
+        "coords": {
+          "lng": 16.950552463531494,
+          "lat": 52.4049978392905
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -202,8 +242,13 @@
       "type": "Feature",
       "id": 9,
       "properties": {
+        "campus": "piotrowo",
         "name": "Coś z 6",
-        "show": false
+        "show": false,
+        "coords": {
+          "lng": 16.9508421421051,
+          "lat": 52.401260254183946
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -220,8 +265,13 @@
       "type": "Feature",
       "id": 10,
       "properties": {
+        "campus": "piotrowo",
         "name": "DS4",
-        "show": false
+        "show": false,
+        "coords": {
+          "lng": 16.95088505744934,
+          "lat": 52.400749666313416
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -242,8 +292,13 @@
       "type": "Feature",
       "id": 11,
       "properties": {
+        "campus": "piotrowo",
         "name": "DS3",
-        "show": false
+        "show": false,
+        "coords": {
+          "lng": 16.951560974121094,
+          "lat": 52.40052710052076
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -264,8 +319,13 @@
       "type": "Feature",
       "id": 12,
       "properties": {
+        "campus": "piotrowo",
         "name": "DS1",
-        "show": false
+        "show": false,
+        "coords": {
+          "lng": 16.952215433120728,
+          "lat": 52.40015397299663
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -286,8 +346,13 @@
       "type": "Feature",
       "id": 13,
       "properties": {
+        "campus": "piotrowo",
         "name": "Proporcja",
-        "show": false
+        "show": false,
+        "coords": {
+          "lng": 16.952333450317383,
+          "lat": 52.400651475660936
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -312,8 +377,13 @@
       "type": "Feature",
       "id": 14,
       "properties": {
+        "campus": "piotrowo",
         "name": "Centrum Mechatroniki, Biomechaniki i Nanoinżynierii",
-        "show": false
+        "show": false,
+        "coords": {
+          "lng": 16.95367455482483,
+          "lat": 52.402530152238654
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -336,8 +406,13 @@
       "type": "Feature",
       "id": 15,
       "properties": {
+        "campus": "piotrowo",
         "name": "Cokolwiek",
-        "show": false
+        "show": false,
+        "coords": {
+          "lng": 16.95311665534973,
+          "lat": 52.402575972619275
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -356,8 +431,13 @@
       "type": "Feature",
       "id": 16,
       "properties": {
+        "campus": "piotrowo",
         "name": "Cokolwiek2",
-        "show": false
+        "show": false,
+        "coords": {
+          "lng": 16.95244073867798,
+          "lat": 52.40211776667169
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -374,8 +454,13 @@
       "type": "Feature",
       "id": 17,
       "properties": {
+        "campus": "piotrowo",
         "name": "Cokolwiek3 asdsadasasdasd",
-        "show": false
+        "show": false,
+        "coords": {
+          "lng": 16.95186138153076,
+          "lat": 52.401528637746715
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -398,8 +483,13 @@
       "type": "Feature",
       "id": 18,
       "properties": {
+        "campus": "piotrowo",
         "name": "Cokolwi adjhaduia hdsaua asdsadasasdasd",
-        "show": false
+        "show": false,
+        "coords": {
+          "lng": 16.95266604423523,
+          "lat": 52.401581005080814
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -420,8 +510,13 @@
       "type": "Feature",
       "id": 19,
       "properties": {
-        "name": "Zbokole - DS2",
-        "show": false
+        "campus": "piotrowo",
+        "name": "DS2",
+        "show": false,
+        "coords": {
+          "lng": 16.953105926513672,
+          "lat": 52.401397719139545
+        }
       },
       "geometry": {
         "type": "Polygon",
@@ -442,8 +537,13 @@
       "type": "Feature",
       "id": 20,
       "properties": {
-        "name": "Telekomunikacja? lub inne pierdy",
-        "show": false
+        "campus": "piotrowo",
+        "name": "Telekomunikacja",
+        "show": false,
+        "coords": {
+          "lng": 16.955713033676147,
+          "lat": 52.40025216475627
+        }
       },
       "geometry": {
         "type": "Polygon",
