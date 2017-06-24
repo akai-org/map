@@ -11,7 +11,7 @@ define([], function() {
 
       this.$scope.closeBuildingPanel = angular.bind(this, this.closeBuildingPanel);
 
-      // this.getBuildingsData();
+      this.getBuildingsData();
       this.initializeMap();
 
       $scope.$on('leafletDirectiveMap.map.click', angular.bind(this, this.clickMapListener));
@@ -103,12 +103,14 @@ define([], function() {
       this.$scope.center.lng = position.lng;
     };
 
-    // MapCtrl.prototype.getBuildingsData = function() {
-    //   var jsonFileUrl = 'resources/json/buildings-data.json';
-    //   var successHandler = angular.bind(this, this.getBuildingsDataSuccessHandler);
-    //   var errorHanlder = angular.bind(this, this.getBuildingsDataErrorHandler);
-    //   this.$http.get(jsonFileUrl).then(successHandler, errorHanlder);
-    // };
+    MapCtrl.prototype.getBuildingsData = function() {
+      var jsonFileUrl = 'resources/json/buildings-data.json';
+
+       var successHandler = angular.bind(this, this.getBuildingsDataSuccessHandler);
+       var errorHanlder = angular.bind(this, this.getBuildingsDataErrorHandler);
+       this.$http.get(jsonFileUrl).then(successHandler, errorHanlder);
+     };
+
 
     MapCtrl.prototype.getBuildingsDataSuccessHandler = function(response) {
       this.$scope.buildings = response.data;
