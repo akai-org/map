@@ -2,19 +2,39 @@
   opacity: 0;
   width: 300px;
   box-sizing: border-box;
-  padding: 20px 30px 25px 50px;
-  background-color: $white;
   position: fixed;
   top: 0;
   left: -300px;
-  min-height: 100vh;
   z-index: 10;
   box-shadow: 10px 0px 50px $mid-grey;
   transition: opacity 0.5s, left 0.5s;
 
+  &--overlay {
+      display: none;
+  }
+
   &.active {
     opacity: 1;
     left: 0;
+
+    .side-nav--overlay {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 5;
+    }
+  }
+
+  &--wrapper {
+    padding: 20px 30px 25px 50px;
+    position: relative;
+    z-index: 10;
+    background-color: $white;
+    min-height: 100vh;
   }
 
   &--close {
