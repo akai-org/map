@@ -46,7 +46,7 @@ require([
       }
     });
 
-    interactiveMapApp.controller('AppCtrl', ['$scope', 'campuses', '$rootScope', AppCtrl]);
+    interactiveMapApp.controller('AppCtrl', ['$scope', 'campuses', '$rootScope', 'searchService', AppCtrl]);
 
     angular.bootstrap(document, ['interactive-map-app']);
 

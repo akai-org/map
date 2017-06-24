@@ -3,11 +3,12 @@ define([], function() {
 
   var MapCtrl = (function() {
 
-    function MapCtrl($scope, $http, $stateParams, campuses) {
+    function MapCtrl($scope, $http, $stateParams, campuses, $rootScope) {
       this.$scope = $scope;
       this.$http = $http;
       this.$stateParams = $stateParams;
       this.campuses = campuses;
+      this.$rootScope = $rootScope;
 
       this.$scope.closeBuildingPanel = angular.bind(this, this.closeBuildingPanel);
 
@@ -16,6 +17,7 @@ define([], function() {
 
       $scope.$on('leafletDirectiveMap.map.click', angular.bind(this, this.clickMapListener));
       $scope.$on('leafletDirectiveGeoJson.map.click', angular.bind(this, this.buildingClickListener));
+      $rootScope.$on('selectBuilding', angular.bind(this, this.selectBuildingListener));
     }
 
     MapCtrl.prototype.initializeMap = function () {
@@ -128,6 +130,16 @@ define([], function() {
 
     MapCtrl.prototype.getBuildingsDataErrorHandler = function(error) {
       console.log(error);
+    };
+
+    MapCtrl.prototype.selectBuildingListener = function(event, data) {
+      this.buildingClick(data.buildingId);
+      var building = this.$scope.buildings.features.filter(function(b) {
+        return b.id === data.buildingId;
+      });
+      this.buildingClick(building[0].id);
+      this.centerMap(building[0].properties.coords);
+      this.showBuildingDetails(building[0]);
     };
 
     return MapCtrl;
