@@ -46,6 +46,7 @@ define([], function() {
     //   marker.lat = args.leafletEvent.latlng.lat;
     //   marker.lng = args.leafletEvent.latlng.lng;
     //   this.$scope.markers.push(marker);
+    //   console.log("====");
     //   for (var i=0; i<this.$scope.markers.length; i++) {
     //     console.log('[' + this.$scope.markers[i].lng + ', ' + this.$scope.markers[i].lat + "],");
     //   }
@@ -106,10 +107,12 @@ define([], function() {
 
     MapCtrl.prototype.getBuildingsData = function() {
       var jsonFileUrl = 'resources/json/buildings-data.json';
-      var successHandler = angular.bind(this, this.getBuildingsDataSuccessHandler);
-      var errorHanlder = angular.bind(this, this.getBuildingsDataErrorHandler);
-      this.$http.get(jsonFileUrl).then(successHandler, errorHanlder);
-    };
+
+       var successHandler = angular.bind(this, this.getBuildingsDataSuccessHandler);
+       var errorHanlder = angular.bind(this, this.getBuildingsDataErrorHandler);
+       this.$http.get(jsonFileUrl).then(successHandler, errorHanlder);
+     };
+
 
     MapCtrl.prototype.getBuildingsDataSuccessHandler = function(response) {
       this.$scope.buildings = response.data;
