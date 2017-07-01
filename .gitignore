@@ -46,3 +46,4 @@ build
 !/gulpfile.js
 !/bower.json
 !/.gitignore
+public

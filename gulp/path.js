@@ -7,15 +7,15 @@ var path = {
   css: './app/css',
   img: './app/img',
   build: {
-    base: './build',
-    html: './build/html',
-    assets: './build/assets',
-    js: './build/js',
-    css: './build/css',
-    img: './build/img',
-    font: './build/font'
+    base: './public',
+    html: './public/html',
+    assets: './public/assets',
+    js: './public/js',
+    css: './public/css',
+    img: './public/img',
+    font: './public/font'
   },
-  dist: './dist'
+  dist: './public'
 };
 
 module.exports = path;
