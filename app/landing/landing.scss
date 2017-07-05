@@ -138,7 +138,7 @@ body {
 
       &--member {
         margin: 20px 0;
-        width: 50%;
+        width: 100%;
         display: flex;
         align-items: center;
 
@@ -163,7 +163,12 @@ body {
             margin: 5px 20px;
           }
         }
-
+      }
+      
+      @media screen and (min-width: 600px) {
+        &--member {
+          width: 50%;
+        }
       }
     }
   }
