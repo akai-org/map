@@ -12,6 +12,15 @@
           </svg>
         </button>
       </div>
+      <div class="landing--autocomplete">
+        <div class="autocomplete--results">
+          <p class="autocomplete--result"
+             ng-repeat="result in search.results"
+             ng-click="showResultOnMap(result)"
+             ng-bind="result.name">
+           </p>
+        </div>
+      </div>
       <div class="landing--search--links">
         <a class="landing--search--link" ui-sref="map">Przejdź do <span class="strong">mapy</span></a>
         <!-- <a class="landing--link" ui-sref="buildings" ng-bind="btnBuildings"></a> -->
@@ -57,7 +66,6 @@
         </div>
       </div>
     </div>
-
   </section>
   <section id="team" class="landing--team">
     <div class="landing--container">

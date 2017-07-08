@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Bibliotek Techniczna",
+    "campus": "piotrowo",
+    "buildingId": 1
+  },
+  {
+    "name": "Centrum Wykładowe",
+    "campus": "piotrowo",
+    "buildingId": 2
+  },
+  {
+    "name": "Jakieś coś",
+    "campus": "piotrowo",
+    "buildingId": 3
+  },
+  {
+    "name": "Hala sportowa",
+    "campus": "piotrowo",
+    "buildingId": 4
+  },
+  {
+    "name": "Wydział maszyn roboczych i transportu",
+    "campus": "piotrowo",
+    "buildingId": 5
+  },
+  {
+    "name": "Wydział elektryczny",
+    "campus": "piotrowo",
+    "buildingId": 6
+  },
+  {
+    "name": "Wydział budownictwa i inżynierii środowiska",
+    "campus": "piotrowo",
+    "buildingId": 7
+  },
+  {
+    "name": "Wydział technologii chemicznej",
+    "campus": "piotrowo",
+    "buildingId": 8
+  },
+  {
+    "name": "Coś z 6",
+    "campus": "piotrowo",
+    "buildingId": 9
+  },
+  {
+    "name": "DS4",
+    "campus": "piotrowo",
+    "buildingId": 10
+  },
+  {
+    "name": "DS3",
+    "campus": "piotrowo",
+    "buildingId": 11
+  },
+  {
+    "name": "DS1",
+    "campus": "piotrowo",
+    "buildingId": 12
+  },
+  {
+    "name": "Proporcja",
+    "campus": "piotrowo",
+    "buildingId": 13
+  },
+  {
+    "name": "Centrum Mechatroniki, Biomechaniki i Nanoinżynierii",
+    "campus": "piotrowo",
+    "buildingId": 14
+  },
+  {
+    "name": "Cokolwiek",
+    "campus": "piotrowo",
+    "buildingId": 15
+  },
+  {
+    "name": "Cokolwiek2",
+    "campus": "piotrowo",
+    "buildingId": 16
+  },
+  {
+    "name": "Cokolwiek3 asdsadasasdasd",
+    "campus": "piotrowo",
+    "buildingId": 17
+  },
+  {
+    "name": "Cokolwi adjhaduia hdsaua asdsadasasdasd",
+    "campus": "piotrowo",
+    "buildingId": 18
+  },
+  {
+    "name": "DS2",
+    "campus": "piotrowo",
+    "buildingId": 19
+  },
+  {
+    "name": "Telekomunikacja",
+    "campus": "piotrowo",
+    "buildingId": 20
+  },
+  {
+    "name": "L053",
+    "campus": "piotrowo",
+    "buildingId": 1,
+    "roomId": 1
+  },
+  {
+    "name": "L029",
+    "campus": "piotrowo",
+    "buildingId": 1,
+    "roomId": 2
+  },
+  {
+    "name": "L125",
+    "campus": "piotrowo",
+    "buildingId": 1,
+    "roomId": 3
+  },
+  {
+    "name": "L126",
+    "campus": "piotrowo",
+    "buildingId": 1,
+    "roomId": 4
+  },
+  {
+    "name": "L128",
+    "campus": "piotrowo",
+    "buildingId": 1,
+    "roomId": 5
+  },
+  {
+    "name": "L122",
+    "campus": "piotrowo",
+    "buildingId": 1,
+    "roomId": 6
+  },
+  {
+    "name": "CW6",
+    "campus": "piotrowo",
+    "buildingId": 2,
+    "roomId": 7
+  },
+  {
+    "name": "CW8",
+    "campus": "piotrowo",
+    "buildingId": 2,
+    "roomId": 8
+  },
+  {
+    "name": "CW11",
+    "campus": "piotrowo",
+    "buildingId": 2,
+    "roomId": 9
+  },
+  {
+    "name": "CW13",
+    "campus": "piotrowo",
+    "buildingId": 2,
+    "roomId": 10
+  }
+]

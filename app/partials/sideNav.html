@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <div class="side-nav">
-  <button class="side-nav--close" ng-click="sidenavToggle()">
-    <svg class="side-nav--close-icon" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-        <path d="M0 0h24v24H0z" fill="none"/>
-    </svg>
-  </button>
+  <div class="side-nav--wrapper">
+    <button class="side-nav--close" ng-click="sidenavToggle()">
+      <svg class="side-nav--close-icon" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          <path d="M0 0h24v24H0z" fill="none"/>
+      </svg>
+    </button>
 
-  <h4 class="side-nav--section-header">Przejdź do</h4>
-  <a ui-sref="map({ campus: id })" class="side-nav--link" ng-repeat="(id, campus) in campuses" ng-bind="campus.name"></a>
+    <h4 class="side-nav--section-header">Przejdź do</h4>
+    <a class="side-nav--link"
+       ui-sref="map({ campus: id })"
+       ng-repeat="(id, campus) in campuses"
+       ng-bind="campus.name"></a>
 
-  <h4 class="side-nav--section-header">Informacje</h4>
-  <a href="#!/#about" class="side-nav--link">O aplikacji</a>
-  <a href="#!/#team" class="side-nav--link">Zespół</a>
-  <a href="http://akai.org.pl/" class="side-nav--link">AKAI</a>
+    <h4 class="side-nav--section-header">Informacje</h4>
+    <a href="#!/#about" class="side-nav--link">O aplikacji</a>
+    <a href="#!/#team" class="side-nav--link">Zespół</a>
+    <a href="http://akai.org.pl/" class="side-nav--link">AKAI</a>
 
-  <h4 class="side-nav--section-header">Social Media</h4>
-  <a href="https://www.facebook.com/akai.pp/" class="side-nav--social-icon">Facebook</a>
-  <a href="https://twitter.com/akai_pp?lang=pl" class="side-nav--social-icon">Twitter</a>
-  <a href="https://github.com/akai-org" class="side-nav--social-icon">Github</a>
+    <h4 class="side-nav--section-header">Social Media</h4>
+    <a href="https://www.facebook.com/akai.pp/" class="side-nav--social-icon">Facebook</a>
+    <a href="https://twitter.com/akai_pp?lang=pl" class="side-nav--social-icon">Twitter</a>
+    <a href="https://github.com/akai-org" class="side-nav--social-icon">Github</a>
 
+    <div class="side-nav--overlay" ng-click="sidenavToggle()"></div>
+  </div>
 </div>

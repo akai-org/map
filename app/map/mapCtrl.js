@@ -3,22 +3,21 @@ define([], function() {
 
   var MapCtrl = (function() {
 
-    function MapCtrl($scope, $http, $stateParams, campuses) {
+    function MapCtrl($scope, $http, $stateParams, campuses, $rootScope) {
       this.$scope = $scope;
       this.$http = $http;
       this.$stateParams = $stateParams;
       this.campuses = campuses;
-      console.log($stateParams);
+      this.$rootScope = $rootScope;
 
       this.$scope.closeBuildingPanel = angular.bind(this, this.closeBuildingPanel);
 
       this.getBuildingsData();
       this.initializeMap();
 
-      this.$scope.goInside = angular.bind(this, this.goInside);
-
       $scope.$on('leafletDirectiveMap.map.click', angular.bind(this, this.clickMapListener));
       $scope.$on('leafletDirectiveGeoJson.map.click', angular.bind(this, this.buildingClickListener));
+      $rootScope.$on('selectBuilding', angular.bind(this, this.selectBuildingListener));
     }
 
     MapCtrl.prototype.initializeMap = function () {
@@ -47,20 +46,11 @@ define([], function() {
     //   marker.lat = args.leafletEvent.latlng.lat;
     //   marker.lng = args.leafletEvent.latlng.lng;
     //   this.$scope.markers.push(marker);
+    //   console.log("====");
     //   for (var i=0; i<this.$scope.markers.length; i++) {
     //     console.log('[' + this.$scope.markers[i].lng + ', ' + this.$scope.markers[i].lat + "],");
     //   }
     // };
-
-    MapCtrl.prototype.goInside = function(event, args) {
-      console.log(args);
-      console.log("cloc");
-      // this.$scope.geojson.data.features = this.$scope.geojson.data.features.map(function(b) {
-      //   b.properties.show = false;
-      //   return b;
-      // });
-      // delete this.$scope.selected;
-    };
 
     MapCtrl.prototype.clickMapListener = function(event, args) {
       this.$scope.geojson.data.features = this.$scope.geojson.data.features.map(function(b) {
@@ -71,34 +61,30 @@ define([], function() {
     };
 
     MapCtrl.prototype.buildingClickListener = function(event, args) {
-      this.buildingClick(args.leafletObject.feature, args.leafletEvent);
+      this.buildingClick(args.leafletObject.feature.id);
       this.showBuildingDetails(args.leafletObject.feature);
       this.centerMap(args.leafletEvent.latlng);
     };
 
-    MapCtrl.prototype.buildingClick = function(feature, leafletEvent) {
-      this.$scope.geojson.data.features = this.$scope.geojson.data.features.map(function(b) {
-        if (b.id === feature.id) {
-          b.properties.show = true;
-        } else {
-          b.properties.show = false;
-        }
-        return b;
+    MapCtrl.prototype.buildingClick = function(buildingId) {
+      this.$scope.geojson.data.features = this.$scope.geojson.data.features.map(function(building) {
+        building.properties.show = building.id === buildingId;
+        return building;
       });
     };
 
     MapCtrl.prototype.getStyle = function(feature) {
       if (feature.properties.show) {
         return {
-            fillColor: 'blue',
+            fillColor: "rgba(30,90,255,0.5)",//'blue',
             weight: 2,
-            opacity: 1,
+            opacity: 0.4,
             color: 'darkblue',
-            fillOpacity: 0.6
+            fillOpacity: 0.8
         };
       } else {
         return {
-            opacity: 0.2,
+            opacity: 0.15,
             fillOpacity: 0
         };
       }
@@ -121,10 +107,12 @@ define([], function() {
 
     MapCtrl.prototype.getBuildingsData = function() {
       var jsonFileUrl = 'resources/json/buildings-data.json';
-      var successHandler = angular.bind(this, this.getBuildingsDataSuccessHandler);
-      var errorHanlder = angular.bind(this, this.getBuildingsDataErrorHandler);
-      this.$http.get(jsonFileUrl).then(successHandler, errorHanlder);
-    };
+
+       var successHandler = angular.bind(this, this.getBuildingsDataSuccessHandler);
+       var errorHanlder = angular.bind(this, this.getBuildingsDataErrorHandler);
+       this.$http.get(jsonFileUrl).then(successHandler, errorHanlder);
+     };
+
 
     MapCtrl.prototype.getBuildingsDataSuccessHandler = function(response) {
       this.$scope.buildings = response.data;
@@ -132,10 +120,29 @@ define([], function() {
         data: this.$scope.buildings,
         style: angular.bind(this, this.getStyle)
       };
+      if (this.$stateParams.buildingId) {
+        var buildingId = this.$stateParams.buildingId;
+        var building = this.$scope.buildings.features.filter(function(b) {
+          return b.id === buildingId;
+        });
+        this.buildingClick(building[0].id);
+        this.centerMap(building[0].properties.coords);
+        this.showBuildingDetails(building[0]);
+      }
     };
 
     MapCtrl.prototype.getBuildingsDataErrorHandler = function(error) {
       console.log(error);
+    };
+
+    MapCtrl.prototype.selectBuildingListener = function(event, data) {
+      this.buildingClick(data.buildingId);
+      var building = this.$scope.buildings.features.filter(function(b) {
+        return b.id === data.buildingId;
+      });
+      this.buildingClick(building[0].id);
+      this.centerMap(building[0].properties.coords);
+      this.showBuildingDetails(building[0]);
     };
 
     return MapCtrl;

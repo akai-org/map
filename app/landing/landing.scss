@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  // max-height: 100%;
+  // overflow: hidden;
 }
 
 .landing {
@@ -225,5 +227,43 @@ body {
   &--text {
     color: $mid-grey;
     text-align: justify;
+  }  
+    
+  &--autocomplete {
+    position: fixed;
+    width: 376px;
+    background-color: $white;
+    border: none;
+    border-radius: 4px;
+    top: 132px;
+  }
+}
+
+.autocomplete {
+  &--results {
+    border-radius: 4px;
+    position: relative;
+    max-height: 150px;
+    overflow: auto;
+    color: $mid-grey;
+    text-align: left;
+  }
+
+  &--result {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-bottom: 1px solid $light-grey;
+
+    &:last-child {
+      border: none;
+    }
+
+    &:hover {
+      color: black;
+      background-color: lighten($light-grey, 25%);
+    }
   }
 }
