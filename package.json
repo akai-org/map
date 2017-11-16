@@ -2,21 +2,19 @@
   "name": "pp-interactive-map",
   "version": "0.0.1",
   "description": "Interactive map of Poznan University of Technology.",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/akai-org/map.git"
-  },
-  "author": "",
+  "repository": "git+https://github.com/akai-org/map.git",
+  "author": "AKAI",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/akai-org/map/issues"
   },
   "scripts": {
-    "start": "npm install; npm install -g gulp; npm install -g bower; npm install -g http-server; gulp build:dev; http-server ./build"
+    "start": "npm install; npm install -g gulp; npm install -g bower; npm install -g http-server; gulp build:dev; http-server ./public"
   },
   "homepage": "https://github.com/akai-org/map#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-bower": "0.0.13",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.0.0",
@@ -33,5 +31,6 @@
     "gulp-util": "^3.0.7",
     "jshint": "^2.9.3",
     "run-sequence": "^1.2.2"
-  }
+  },
+  "main": "index.js"
 }

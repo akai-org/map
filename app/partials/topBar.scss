@@ -1,21 +1,21 @@
 .top-bar {
   width: 100%;
   background-color: $white;
-
-  &--menu-icon {
-    font-family: "FontAwesome";
-    font-size: 24px;
-    text-decoration: none;
-    color: #aeaeae;
+  display: flex;
+  
+  &--menu {
     display: inline-block;
-    padding: 20px 10px 20px 30px;
+    vertical-align: middle;
     background: none;
     border: none;
     cursor: pointer;
     outline: none;
 
-    &:after {
-      content: "\f0c9";
+    &-icon {
+      fill: $light-grey;
+      height: 30px;
+      width: 30px;
+      padding: 12px 20px;
     }
   }
 
@@ -26,11 +26,15 @@
     height: 44px;
     margin: 10px 0;
     border: none;
-    border-radius: 4px 0 0 4px;
     background-color: $white;
     font-size: initial;
     color: $mid-grey;
     vertical-align: bottom;
+    outline: none;
+
+    &:focus {
+      border-bottom: 1px solid blue;
+    } 
   }
 
   &--searchbox--button {
@@ -39,6 +43,17 @@
     color: #aeaeae;
   }
 }
-.landing-page-hamburger{
+
+.landing-page--menu {
   position: absolute;
+
+  &-icon {
+    fill: $white;
+  }
+}
+
+.autocomplete--results {
+  position: absolute;
+  z-index: 1000;
+  background: #f7f7f7;
 }

@@ -4,7 +4,7 @@ define(['./landingPageCtrl'],
 
   var landingModule = angular.module('landing-module', ['ui.router']);
 
-  landingModule.controller('landingPageCtrl', ['$scope', LandingPageCtrl]);
+  landingModule.controller('landingPageCtrl', ['$scope', '$state', '$rootScope', 'searchService', LandingPageCtrl]);
 
   landingModule.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $stateProvider
