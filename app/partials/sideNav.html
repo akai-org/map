@@ -12,17 +12,17 @@
     <a class="side-nav--link"
        ui-sref="map({ campus: id })"
        ng-repeat="(id, campus) in campuses"
-       ng-bind="campus.name"></a>
+       ng-bind="campus.name"
+       ng-click="closeMenu()"></a>
 
     <h4 class="side-nav--section-header">Informacje</h4>
-    <a href="#!/#about" class="side-nav--link">O aplikacji</a>
-    <a href="#!/#team" class="side-nav--link">Zespół</a>
-    <a href="http://akai.org.pl/" class="side-nav--link">AKAI</a>
+    <a href="#!/#about" class="side-nav--link" ng-click="closeMenu()">O aplikacji</a>
+    <a href="#!/#team" class="side-nav--link" ng-click="closeMenu()">Zespół</a>
+    <a href="http://akai.org.pl/" class="side-nav--link" ng-click="closeMenu()">AKAI</a>
 
     <h4 class="side-nav--section-header">Social Media</h4>
-    <a href="https://www.facebook.com/akai.pp/" class="side-nav--social-icon">Facebook</a>
-    <a href="https://twitter.com/akai_pp?lang=pl" class="side-nav--social-icon">Twitter</a>
-    <a href="https://github.com/akai-org" class="side-nav--social-icon">Github</a>
+    <a href="https://www.facebook.com/akai.pp/" class="side-nav--social-icon" ng-click="closeMenu()">Facebook</a>
+    <a href="https://github.com/akai-org" class="side-nav--social-icon" ng-click="closeMenu()">Github</a>
   </div>
 
   <div class="side-nav--overlay" ng-click="sidenavToggle()"></div>

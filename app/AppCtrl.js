@@ -14,12 +14,17 @@ define([], function() {
       this.$scope.search = angular.bind(this, this.search);
       this.$scope.sidenavToggle = angular.bind(this, this.sidenavToggle);
       this.$scope.showResultOnMap = angular.bind(this, this.showResultOnMap);
+      this.$scope.closeMenu = angular.bind(this, this.closeMenu);
 
       this.$scope.$watch('query', angular.bind(this, this.watchSearchQuery));
     }
 
     AppCtrl.prototype.sidenavToggle = function () {
       angular.element('.side-nav').toggleClass('active');
+    };
+
+    AppCtrl.prototype.closeMenu = function() {
+      angular.element('.side-nav').removeClass('active');
     };
 
     AppCtrl.prototype.search = function(query) {

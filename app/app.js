@@ -23,8 +23,9 @@ require([
 
     interactiveMapApp.run(['$rootScope', '$state', function ($rootScope, $state) {
       $rootScope.title = 'Interaktywna mapa Politechniki Poznańskiej';
+
       $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams, options) {
-          $rootScope.landingView = toParams.landingPageView ? true : false;
+          $rootScope.landingView = toParams.landingPageView ? true : false;         
       });
     }]);
 
