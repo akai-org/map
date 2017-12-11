@@ -1,0 +1,262 @@
+[
+  {
+    "name": "Biblioteka Techniczna",
+    "campus": "piotrowo",
+    "buildingId": 1,
+    "aliases": [
+      "BT"
+    ]
+  },
+  {
+    "name": "Centrum Wykładowe",
+    "campus": "piotrowo",
+    "buildingId": 2,
+    "aliases": [
+      "CW"
+    ]
+  },
+  {
+    "name": "Hala 24",
+    "campus": "piotrowo",
+    "buildingId": 3,
+    "aliases": [
+      "H24"
+    ]
+  },
+  {
+    "name": "Hala Sportowa przy DS1",
+    "campus": "piotrowo",
+    "buildingId": 4,
+    "aliases": [
+      "Hala sportowa"
+    ]
+  },
+  {
+    "name": "Wydział Maszyn Roboczych i Transportu",
+    "campus": "piotrowo",
+    "buildingId": 5,
+    "aliases": [
+      "WMRiT",
+      "MRiT",
+      "Budynek z zegarem"
+    ]
+  },
+  {
+    "name": "Wydział Elektryczny",
+    "campus": "piotrowo",
+    "buildingId": 6,
+    "aliases": [
+      "WE",
+      "Elektryk"
+    ]
+  },
+  {
+    "name": "Wydział Budownictwa i Inżynierii Środowiska",
+    "campus": "piotrowo",
+    "buildingId": 7,
+    "aliases": [
+      "WBiIŚ",
+      "BIŚ",
+      "Różowy pałac"
+    ]
+  },
+  {
+    "name": "Wydział Technologii Chemicznej",
+    "campus": "piotrowo",
+    "buildingId": 8,
+    "aliases": [
+      "WTCh",
+      "Chemia"
+    ]
+  },
+  {
+    "name": "Polsko-Niemieckie Centrum Akademickie",
+    "campus": "piotrowo",
+    "buildingId": 9,
+    "aliases": [
+      "PNCA",
+      "Chór"
+    ]
+  },
+  {
+    "name": "Dom Studencki nr 4",
+    "campus": "piotrowo",
+    "buildingId": 10,
+    "aliases": [
+      "DS4"
+    ]
+  },
+  {
+    "name": "Dom Studencki nr 3",
+    "campus": "piotrowo",
+    "buildingId": 11,
+    "aliases": [
+      "DS3"
+    ]
+  },
+  {
+    "name": "Dom Studencki nr 1",
+    "campus": "piotrowo",
+    "buildingId": 12,
+    "aliases": [
+      "DS1"
+    ]
+  },
+  {
+    "name": "Proporcja",
+    "campus": "piotrowo",
+    "buildingId": 13,
+    "aliases": [
+      "Proporcja DS1"
+    ]
+  },
+  {
+    "name": "Centrum Mechatroniki, Biomechaniki i Nanoinżynierii",
+    "campus": "piotrowo",
+    "buildingId": 14,
+    "aliases": [
+      "MCH",
+      "Mechatronika"
+    ]
+  },
+  {
+    "name": "Hala A4",
+    "campus": "piotrowo",
+    "buildingId": 15,
+    "aliases": [
+      "A4"
+    ]
+  },
+  {
+    "name": "Cokolwiek2",
+    "campus": "piotrowo",
+    "buildingId": 16,
+    "aliases": [
+
+    ]
+  },
+  {
+    "name": "Cokolwiek3 asdsadasasdasd",
+    "campus": "piotrowo",
+    "buildingId": 17,
+    "aliases": [
+
+    ]
+  },
+  {
+    "name": "Cokolwi adjhaduia hdsaua asdsadasasdasd",
+    "campus": "piotrowo",
+    "buildingId": 18,
+    "aliases": [
+
+    ]
+  },
+  {
+    "name": "Dom Studencki nr 2",
+    "campus": "piotrowo",
+    "buildingId": 19,
+    "aliases": [
+      "DS2"
+    ]
+  },
+  {
+    "name": "Wydział Elektroniki i Telekomunikacji",
+    "campus": "piotrowo",
+    "buildingId": 20,
+    "aliases": [
+      "EiT",
+      "WEiT",
+      "Telekomunikacja"
+    ]
+  },
+  {
+    "name": "L053",
+    "campus": "piotrowo",
+    "buildingId": 1,
+    "roomId": 1,
+    "aliases": [
+      "L053BT"
+    ]
+  },
+  {
+    "name": "L029",
+    "campus": "piotrowo",
+    "buildingId": 1,
+    "roomId": 2,
+    "aliases": [
+      "L029BT"
+    ]
+  },
+  {
+    "name": "L125",
+    "campus": "piotrowo",
+    "buildingId": 1,
+    "roomId": 3,
+    "aliases": [
+      "L125BT"
+    ]
+  },
+  {
+    "name": "L126",
+    "campus": "piotrowo",
+    "buildingId": 1,
+    "roomId": 4,
+    "aliases": [
+      "L126BT"
+    ]
+  },
+  {
+    "name": "L128",
+    "campus": "piotrowo",
+    "buildingId": 1,
+    "roomId": 5,
+    "aliases": [
+      "L128BT"
+    ]
+  },
+  {
+    "name": "L122",
+    "campus": "piotrowo",
+    "buildingId": 1,
+    "roomId": 6,
+    "aliases": [
+      "L122BT"
+    ]
+  },
+  {
+    "name": "CW6",
+    "campus": "piotrowo",
+    "buildingId": 2,
+    "roomId": 7,
+    "aliases": [
+      "Sala 6 CW"
+    ]
+  },
+  {
+    "name": "CW8",
+    "campus": "piotrowo",
+    "buildingId": 2,
+    "roomId": 8,
+    "aliases": [
+      "Sala 8CW"
+    ]
+  },
+  {
+    "name": "CW11",
+    "campus": "piotrowo",
+    "buildingId": 2,
+    "roomId": 9,
+    "aliases": [
+      "Sala 11 CW"
+    ]
+  },
+  {
+    "name": "CW13",
+    "campus": "piotrowo",
+    "buildingId": 2,
+    "roomId": 10,
+    "aliases": [
+      "Sala 13 CW"
+    ]
+  }
+]
