@@ -276,7 +276,7 @@
       "id": 5,
       "properties": {
         "campus": "piotrowo",
-        "name": "Wydział maszyn roboczych i transportu",
+        "name": "Wydział Budowy Maszyn i Zarządzania",
         "address": "Piotrowo 3, 60-965 Poznań",
         "link": "wbmiz.put.poznan.pl",
         "phone": "61 665 23 60",
@@ -318,7 +318,7 @@
       "id": 6,
       "properties": {
         "campus": "piotrowo",
-        "name": "Wydział elektryczny",
+        "name": "Wydział Elektryczny",
         "address": "Piotrowo 3a, 60-101 Poznań",
         "link": "fc.put.poznan.pl",
         "show": false,
@@ -343,7 +343,7 @@
       "id": 7,
       "properties": {
         "campus": "piotrowo",
-        "name": "Wydział budownictwa i inżynierii środowiska",
+        "name": "Wydział Budownictwa i Inżynierii Środowiska",
         "show": false,
         "coords": {
           "lng": 16.949951648712158,
@@ -518,8 +518,6 @@
           [16.95217251777649, 52.40039094207555],
           [16.952226161956787, 52.400443310759954],
           [16.95238709449768, 52.40040403425248],
-
-
           [16.952521204948425, 52.40056768613633],
           [16.952236890792847, 52.40066260395084],
           [16.952059864997864, 52.40048913330786],
@@ -716,7 +714,7 @@
       "id": 20,
       "properties": {
         "campus": "piotrowo",
-        "name": "Telekomunikacja",
+        "name": "Wydział Elektroniki i Telekomunikacji",
         "show": false,
         "coords": {
           "lng": 16.955713033676147,
