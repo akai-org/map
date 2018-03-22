@@ -3,12 +3,13 @@ define([], function() {
 
   var MapCtrl = (function() {
 
-    function MapCtrl($scope, $http, $stateParams, campuses, $rootScope) {
+    function MapCtrl($scope, $http, $stateParams, campuses, $rootScope, resourceService) {
       this.$scope = $scope;
       this.$http = $http;
       this.$stateParams = $stateParams;
       this.campuses = campuses;
       this.$rootScope = $rootScope;
+      this.resourceService = resourceService;
 
       this.$scope.closeBuildingPanel = angular.bind(this, this.closeBuildingPanel);
 
@@ -106,12 +107,10 @@ define([], function() {
     };
 
     MapCtrl.prototype.getBuildingsData = function() {
-      var jsonFileUrl = 'resources/json/buildings-data.json';
-
-       var successHandler = angular.bind(this, this.getBuildingsDataSuccessHandler);
-       var errorHanlder = angular.bind(this, this.getBuildingsDataErrorHandler);
-       this.$http.get(jsonFileUrl).then(successHandler, errorHanlder);
-     };
+      var successHandler = angular.bind(this, this.getBuildingsDataSuccessHandler);
+      var errorHanlder = angular.bind(this, this.getBuildingsDataErrorHandler);
+      this.resourceService.getBuildingsData().then(successHandler, errorHanlder);
+    };
 
 
     MapCtrl.prototype.getBuildingsDataSuccessHandler = function(response) {
