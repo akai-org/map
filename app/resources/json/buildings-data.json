@@ -15,12 +15,12 @@
           {
             "id": 1,
             "name": "parter",
-            "picturuURL": "resources/svg/BT0.svg"
+            "pictureURL": "resources/svg/BT0.svg"
           },
           {
             "id": 2,
             "name": "I piętro",
-            "picturuURL": "resources/svg/BT1.svg"
+            "pictureURL": "resources/svg/BT1.svg"
           }
         ],
         "coords": {
