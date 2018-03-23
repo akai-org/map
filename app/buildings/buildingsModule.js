@@ -21,30 +21,16 @@ define(['./buildingsCtrl',
           controller: 'FloorsCtrl',
           templateUrl: 'html/buildings/floors.html',
           resolve: {
-            buildings: ['$stateParams', 'resourceService', function($stateParams, resourceService) {
-              return resourceService.getBuildingsData();
+            buildings: ['$stateParams', 'buildingUtil', function($stateParams, buildingUtil) {
+              return buildingUtil.getBuildingsData();
             }],
-            floorPictureUrl: ['$stateParams', 'buildings', 'resourceService', function($stateParams, buildings, resourceService) {
+            currentBuilding: ['$stateParams', 'buildings', 'buildingUtil', function($stateParams, buildings, buildingUtil) {
               var buildingId = parseInt($stateParams.buildingId);
+              return buildingUtil.getBuildingById(buildingId, buildings.data.features);
+            }],
+            currentFloor: ['$stateParams', 'currentBuilding', 'buildingUtil', function($stateParams, currentBuilding, buildingUtil) {
               var floorId = parseInt($stateParams.floorId); 
-              // this.$scope.buildings = response.data.features;
-              var currentBuilding = buildings.data.features.reduce(function(acc, next) {
-                if (next.id === buildingId) {
-                  acc = next;
-                } 
-                return acc;
-              }, {});
-
-              var currentFloor = resourceService.getCurrentFloor(floorId, currentBuilding);
-
-              // var currentFloor = currentBuilding.properties.floors.reduce((acc, next) => {
-              //   if (next.id === floorId) {
-              //     acc = next;
-              //   }
-              //   return acc;
-              // }, {});
-
-              return currentFloor.pictureURL;
+              return buildingUtil.getFloorById(floorId, currentBuilding);
             }]
           }
         });
