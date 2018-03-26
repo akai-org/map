@@ -16,16 +16,7 @@ define([], function() {
             return this.$http.get(jsonFileUrl);
         };
 
-        ResourceService.prototype.getCurrentFloor = function(floorId, building) {
-            return building.properties.floors.reduce((acc, next) => {
-                if (next.id === floorId) {
-                  acc = next;
-                }
-                return acc;
-              }, {});
-        }
-
-
+        
         return ResourceService;
     })();
 return ResourceService;

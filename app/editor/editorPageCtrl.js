@@ -3,25 +3,26 @@ define([], function () {
 
   var EditorPageCtrl = (function () {
 
-    function EditorPageCtrl($scope) {
+    function EditorPageCtrl($scope, buildingUtil) {
       this.$scope = $scope;
-      var mymap = L.map('mapid', {
-        center: [40.75, -74.2],
-        zoom: 13
-      });
-
-      var imageUrl = 'img/CW0.svg',
-        imageBounds = [[40.712216, -74.22655], [40.773941, -74.12544]];
-
-      L.imageOverlay(imageUrl, imageBounds).addTo(mymap);
-
-      // L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      //   attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-      //   maxZoom: 18
-      // }).addTo(mymap);
-      // var marker = L.marker([52.40407, 16.94968]).addTo(mymap);
-      // marker.bindPopup("<b>Centrum Wykładowe</b><br>Hello World. <a href='#'>Wejdź do środka</a>").openPopup();
+      this.buildingUtil = buildingUtil;
+      this.getBuildingsData();
     }
+
+    EditorPageCtrl.prototype.getBuildingsData = function() {
+      var successHandler = angular.bind(this, this.getBuildingsDataSuccessHandler);
+      var errorHandler = angular.bind(this, this.getBuildingsDataErrorHandler);
+      this.buildingUtil.getBuildingsData().then(successHandler, errorHandler);
+    };
+
+    EditorPageCtrl.prototype.getBuildingsDataSuccessHandler = function(response) {
+      this.$scope.buildingsData = response.data.features;
+      console.log(this.$scope.buildingsData);
+    };
+
+    EditorPageCtrl.prototype.getBuildingsDataErrorHandler = function(error) {
+      console.log(error);
+    };
 
     return EditorPageCtrl;
   })();

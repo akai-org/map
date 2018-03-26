@@ -1,6 +1,35 @@
 <!doctype html>
-<div class="container">
-  <div id="mapid">
+<div class="container editor">
+  <form>
+    <div class="editor-building m-b-20px" ng-repeat="building in buildingsData"> 
+      <h2>Dane budynku:</h2>
+      <div class="form-group">
+        <label>Nazwa budynku: </label>
+        <input class="form-control" type="text" ng-model="building.properties.name" />
+      </div>
+      
+      <div class="form-group">
+        <label>Adres budynku: </label>
+        <input class="form-control" type="text" ng-model="building.properties.address" />
+      </div>
+      
+      <div class="form-group">
+        <label>Link: </label>
+        <input class="form-control" type="text" ng-model="building.properties.link" />
+      </div>
 
-  </div>
+      <div class="form-group">
+        <label>Telefon: </label>
+        <input class="form-control" type="text" ng-model="building.properties.phone" /> 
+      </div>
+            
+      <div ng-if="building.properties.floors.length > 0">
+        <h3>Piętra:</h3>
+        <div class="m-l-20px" ng-repeat="floor in building.properties.floors">
+          <p>{{floor.name}}</p>
+          <p>{{floor.pictureURL}}</p>
+        </div>
+      </div>
+    </div>
+  </form>
 </div>
