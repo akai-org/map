@@ -1,17 +1,25 @@
-define(['./editorPageCtrl'],
-  function (EditorPageCtrl) {
+define(['./editorBuildingsDataCtrl',
+        './editorSearchDataCtrl'],
+  function (EditorBuildingsDataCtrl,
+            EditorSearchDataCtrl) {
     'use strict';
 
     var editorModule = angular.module('editor-module', ['ui.router']);
 
-    editorModule.controller('EditorPageCtrl', ['$scope', 'buildingUtil', EditorPageCtrl]);
+    editorModule.controller('EditorBuildingsDataCtrl', ['$scope', 'buildingUtil', EditorBuildingsDataCtrl]);
+    editorModule.controller('EditorSearchDataCtrl', ['$scope', 'buildingUtil', EditorSearchDataCtrl]);
 
     editorModule.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
       $stateProvider
-        .state('editor', {
-          url: '/editor',
-          controller: 'EditorPageCtrl',
-          templateUrl: 'html/editor/editor.html'
+        .state('editorBuildingsData', {
+          url: '/editor-buildings-data',
+          controller: 'EditorBuildingsDataCtrl',
+          templateUrl: 'html/editor/editorBuildingsData.html'
+        })
+        .state('editorSearchData', {
+          url: '/editor-search-data',
+          controller: 'EditorSearchDataCtrl',
+          templateUrl: 'html/editor/editorSearchData.html'
         });
     }]);
 
