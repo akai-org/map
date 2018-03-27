@@ -4,18 +4,22 @@ define([], function() {
     var ResourceService = (function() {
 
         function ResourceService($http) {
-            if (this instanceof ResourceService) {
-                this.$http = $http;
-            } else {
-                return new ResourceService($http);
-            }
+          if (this instanceof ResourceService) {
+              this.$http = $http;
+          } else {
+              return new ResourceService($http);
+          }
         }
 
         ResourceService.prototype.getBuildingsData = function() {
-            var jsonFileUrl = 'resources/json/buildings-data.json';
-            return this.$http.get(jsonFileUrl);
+          var jsonFileUrl = 'resources/json/buildings-data.json';
+          return this.$http.get(jsonFileUrl);
         };
 
+        ResourceService.prototype.getBaseSearchData = function() {
+          var jsonFileUrl = 'resources/json/base-search-data.json';
+          return this.$http.get(jsonFileUrl);
+        }
         
         return ResourceService;
     })();
