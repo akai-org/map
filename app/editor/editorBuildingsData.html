@@ -1,0 +1,58 @@
+<!doctype html>
+<div class="container editor">
+  <h2>Edytor danych dla budynków - wyświetlanie na mapie, wyświetlanie danych pięter</h2>
+  <button type="button" class="btn btn-warning m-t-10px m-b-20px"
+          ng-click="saveJsonFile()">
+    Zapisz
+  </button>
+  <form>
+    <div class="editor-building m-b-20px" ng-repeat="building in buildingsData"> 
+      <h2>Dane budynku:</h2>
+      <div class="form-group">
+        <label>Nazwa budynku: </label>
+        <input class="form-control" type="text" ng-model="building.properties.name" />
+      </div>
+      
+      <div class="form-group">
+        <label>Adres budynku: </label>
+        <input class="form-control" type="text" ng-model="building.properties.address" />
+      </div>
+      
+      <div class="form-group">
+        <label>Link: </label>
+        <input class="form-control" type="text" ng-model="building.properties.link" />
+      </div>
+
+      <div class="form-group">
+        <label>Telefon: </label>
+        <input class="form-control" type="text" ng-model="building.properties.phone" /> 
+      </div>
+            
+      <div>
+        <h3>Piętra:</h3>
+        <div ng-if="building.properties.floors.length > 0">
+          <div class="m-l-20px m-t-10px floor-items" ng-repeat="floor in building.properties.floors">
+            <div class="form-group">
+              <label>Nazwa piętra:</label>
+              <input class="form-control" type="text" ng-model="floor.name" />
+            </div>
+            <div class="form-group">
+              <label>URL do SVG widoku piętra:</label>
+              <input class="form-control" type="text" ng-model="floor.pictureURL" />
+            </div>
+            <div class="m-l-20px m-t-10px floor-items" ng-repeat="room in floor.rooms">
+                <div class="form-group">
+                  <label>Nazwa sali:</label>
+                  <input class="form-control" type="text" ng-model="room.name" />
+                </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-success m-t-10px" 
+          ng-click="addFloor(building.properties)">
+          Dodaj piętro
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
