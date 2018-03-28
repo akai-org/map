@@ -60,8 +60,9 @@ define([], function () {
 			};
 
 			EditorSearchDataCtrl.prototype.saveJsonFile = function() {
+				var data = this.searchDataUtil.convertFormDataToBaseSearchData(this.$scope.buildings);
 				var a = document.createElement('a');
-				a.setAttribute('href', 'data:text/plain;charset=utf-u,'+encodeURIComponent(JSON.stringify(this.$scope.buildings)));
+				a.setAttribute('href', 'data:text/plain;charset=utf-u,'+encodeURIComponent(JSON.stringify(data)));
 				a.setAttribute('download', 'base-search-data.json');
 				a.click();
 			};

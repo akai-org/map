@@ -26,7 +26,28 @@ define([], function() {
     };
 
     SearchDataUtil.prototype.convertFormDataToBaseSearchData = function(formData) {
-      
+      var data = [];
+      for (var i=0; i<formData.length; i++) {
+        var building = {
+          name: formData[i].name,
+          buildingId: formData[i].buildingId,
+          campus: formData[i].campus,
+          aliases: formData[i].aliasesString.split(',')
+        }
+        data.push(building);
+        for (var j=0; j<formData[i].rooms.length; j++) {
+          var room = formData[i].rooms[j];
+          var _room = {
+            name: room.name,
+            buildingId: room.buildingId,
+            campus: room.campus,
+            roomId: room.roomId,
+            aliases: room.aliasesString.split(',')
+          };
+          data.push(_room);
+        }
+      }
+      return data;
     };
 
     SearchDataUtil.prototype.prepareRooms = function(buildings, baseSearchData) {
