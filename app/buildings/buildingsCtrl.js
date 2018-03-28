@@ -22,7 +22,6 @@ define([], function() {
         var buildingId = parseInt(this.$stateParams.buildingId);
         this.$scope.buildings = response.data.features;
         this.$scope.currentBuilding = this.getCurrentBuilding(buildingId, this.$scope.buildings);
-        console.log(this.$scope.currentBuilding)
       };
 
       BuildingsCtrl.prototype.getBuidlingsDataErrorHandler = function(error) {
@@ -36,7 +35,7 @@ define([], function() {
           } 
           return acc;
         }, {});
-      }
+      };
   
       return BuildingsCtrl;
     })();

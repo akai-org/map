@@ -29,7 +29,7 @@ define([], function() {
                 bounds: [[-540, -960], [540, 960]]
             }
         },
-      }
+      };
 
       // this.$scope.markers = {
       //   osloMarker: {

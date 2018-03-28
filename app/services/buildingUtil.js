@@ -22,16 +22,16 @@ define([], function() {
             } 
             return acc;
           }, {});
-        }
+        };
 
         BuildingUtil.prototype.getFloorById = function(floorId, building) {
-          return building.properties.floors.reduce((acc, next) => {
+          return building.properties.floors.reduce(function(acc, next) {
             if (next.id === floorId) {
               acc = next;
             }
             return acc;
           }, {});
-        }
+        };
 
 
         return BuildingUtil;

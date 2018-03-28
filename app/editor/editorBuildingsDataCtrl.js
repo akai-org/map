@@ -38,29 +38,29 @@ define([], function () {
             acc = next;
           }
           return acc;
-        }, 0)
+        }, 0);
         
         floor = {
           id: ++maxId,
           name: '',
           pictureURL: ''
-        }
+        };
       } else {
         floor = {
           id: 1,
           name: '',
           pictureURL: ''
-        }
+        };
       }
       floors.push(floor);
       buildingProperties.floors = floors;
-    }
+    };
 
     EditorBuildingsDataCtrl.prototype.saveJsonFile = function() {
       var successHandler = angular.bind(this, this.saveJsonFileSuccessHandler);
       var errorHandler = angular.bind(this, this.saveJsonFileErrorHandler);
       this.buildingUtil.getBuildingsData().then(successHandler, errorHandler);
-    }
+    };
 
     EditorBuildingsDataCtrl.prototype.saveJsonFileSuccessHandler = function(response) {
       var buildingsDataJson = response.data;
@@ -69,11 +69,11 @@ define([], function () {
       a.setAttribute('href', 'data:text/plain;charset=utf-u,'+encodeURIComponent(JSON.stringify(buildingsDataJson)));
       a.setAttribute('download', 'buildings-data.json');
       a.click();
-    }
+    };
 
     EditorBuildingsDataCtrl.prototype.saveJsonFileErrorHandler = function(error) {
       console.log(error);
-    }
+    };
 
     return EditorBuildingsDataCtrl;
   })();

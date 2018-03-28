@@ -13,7 +13,15 @@ define([], function() {
 
     SearchDataUtil.prototype.getBaseSearchData = function() {
       return this.resourceService.getBaseSearchData();
-    }
+    };
+
+    SearchDataUtil.prototype.convertBaseSearchDataToFormData = function(baseSearchData) {
+
+    };
+
+    SearchDataUtil.prototype.convertFormDataToBaseSearchData = function(formData) {
+      
+    };
 
     return SearchDataUtil;
   })();
