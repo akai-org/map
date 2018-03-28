@@ -30,7 +30,8 @@ gulp.task('generateAliases', function() {
       var obj2 = {
         name: alias,
         campus: el.campus,
-        buildingId: el.buildingId
+        buildingId: el.buildingId,
+        roomId: el.roomId
       }
       output.push(obj2);
     })
