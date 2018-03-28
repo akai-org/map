@@ -7,3 +7,10 @@
   // transform: rotateY(33deg) rotateX(-70deg) perspective(68px);
   backface-visibility: hidden;
 }
+
+.building {
+  &--container {
+    width: 100%;
+    max-height: calc(100vh - 64px);
+  }
+}

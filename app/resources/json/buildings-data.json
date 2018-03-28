@@ -11,6 +11,18 @@
         "link": "library.put.poznan.pl",
         "phone": "61 665 35 19",
         "show": false,
+        "floors": [
+          {
+            "id": 1,
+            "name": "parter",
+            "pictureURL": "resources/svg/BT0.svg"
+          },
+          {
+            "id": 2,
+            "name": "I piętro",
+            "pictureURL": "resources/svg/BT1.svg"
+          }
+        ],
         "coords": {
           "lng": 16.94915771484375,
           "lat": 52.403505461495115

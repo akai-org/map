@@ -6,6 +6,7 @@ var path = require('./path');
 
 gulp.task('lib:js', function() {
   return gulp.src([
+      path.npm + '/bootstrap/dist/js/bootstrap.min.js',
       path.bower + '/jquery/dist/jquery.min.js',
       path.bower + '/angular/angular.min.js',
       path.bower + '/angular-ui-router/release/angular-ui-router.min.js',
@@ -14,14 +15,16 @@ gulp.task('lib:js', function() {
       path.bower + '/algoliasearch/dist/algoliasearch.angular.min.js',
       path.bower + '/perfect-scrollbar/js/perfect-scrollbar.min.js',
       path.bower + '/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js'
+      
     ])
     .pipe(gulp.dest(path.build.js + '/lib'));
 });
 
 gulp.task('lib:css', function() {
   return gulp.src([
+      path.npm + '/bootstrap/dist/css/bootstrap.min.css',
       path.bower + '/leaflet/dist/leaflet.css',
-      path.bower + '/perfect-scrollbar/css/perfect-scrollbar.min.css'
+      path.bower + '/perfect-scrollbar/css/perfect-scrollbar.min.css',
     ])
     .pipe(gulp.dest(path.build.css + '/lib'));
 });

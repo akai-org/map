@@ -32,5 +32,8 @@
     "jshint": "^2.9.3",
     "run-sequence": "^1.2.2"
   },
-  "main": "index.js"
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "3.3.7"
+  }
 }

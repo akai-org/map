@@ -1,5 +1,6 @@
 var path = {
   bower: './bower_components',
+  npm: './node_modules',
   app: './app',
   html: './app/html',
   js: './app/js',
