@@ -1,21 +1,25 @@
 <!doctype html>
 <div class="container editor">
   <h2>Edytor danych dla pliku base-search-data.json - dla Algolii</h2>
-  <button type="button" class="btn btn-warning m-t-10px m-b-20px"
-          ng-click="saveJsonFile()">
-    Zapisz
-  </button>
-  <form>
-    <div class="editor-building m-b-20px" ng-repeat="building in buildings"> 
+  <form ng-submit="saveJsonFile()">
+    <button type="button" class="btn btn-success m-t-10px m-b-20px m-r-20px"
+      ng-click="addBuilding(buildings)">
+      Dodaj nowy budynek
+    </button>
+    <button type="submit" class="btn btn-warning m-t-10px m-b-20px">
+      Zapisz
+    </button>
+    <div class="editor-building m-b-20px" ng-repeat="building in buildings | orderBy:'-buildingId'"> 
       <h2>Dane budynku:</h2>
       <div class="form-group">
         <label>Nazwa budynku: </label>
-        <input class="form-control" type="text" ng-model="building.name" />
+        <input class="form-control" type="text" ng-model="building.name" required />
       </div>
       
       <div class="form-group">
         <label>Campus: </label>
-        <input class="form-control" type="text" ng-model="building.campus" />
+        <select class="form-control" ng-model="building.campus" required
+          ng-options="campus.shortName for campus in campuses" />
       </div>
       
       <div class="form-group">
@@ -30,7 +34,7 @@
           <div class="m-l-20px m-t-10px floor-items" ng-repeat="room in building.rooms">
             <div class="form-group">
               <label>Nazwa sali:</label>
-              <input class="form-control" type="text" ng-model="room.name" />
+              <input class="form-control" type="text" ng-model="room.name" required />
             </div>
             <div class="form-group">
               <label>Aliasy:</label>

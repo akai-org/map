@@ -13,7 +13,7 @@ define(['./searchService',
     globalServiceModule.factory('searchService', ['algolia', SearchService]);
     globalServiceModule.factory('resourceService', ['$http', ResourceService]);
     globalServiceModule.factory('buildingUtil', ['resourceService', BuildingUtil]);
-    globalServiceModule.factory('searchDataUtil', ['resourceService', SearchDataUtil]);
+    globalServiceModule.factory('searchDataUtil', ['resourceService', 'campuses', SearchDataUtil]);
 
     return globalServiceModule;
 });

@@ -33,22 +33,26 @@ require([
       'piotrowo': {
         name: 'Kampus Piotrowo',
         coords: [52.4022733, 16.9496852],
-        zoom: 17
+        zoom: 17,
+        shortName: 'piotrowo'
       },
       'nieszawska': {
         name: 'Kampus Nieszawska',
         coords: [52.4163383, 16.9804755],
-        zoom: 17
+        zoom: 17,
+        shortName: 'nieszawska'
       },
       'strzelecka': {
         name: 'Kampus Strzelecka',
         coords: [52.4047467, 16.9330464],
-        zoom: 20
+        zoom: 20,
+        shortName: 'strzelecka'
       },
       'wilda': {
         name: 'Rektorat',
         coords: [52.4047467, 16.9330464],
-        zoom: 20
+        zoom: 20,
+        shortName: 'wilda'
       }
     });
 

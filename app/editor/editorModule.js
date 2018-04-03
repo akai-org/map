@@ -7,7 +7,7 @@ define(['./editorBuildingsDataCtrl',
     var editorModule = angular.module('editor-module', ['ui.router']);
 
     editorModule.controller('EditorBuildingsDataCtrl', ['$scope', 'buildingUtil', EditorBuildingsDataCtrl]);
-    editorModule.controller('EditorSearchDataCtrl', ['$scope', 'searchDataUtil', EditorSearchDataCtrl]);
+    editorModule.controller('EditorSearchDataCtrl', ['$scope', 'searchDataUtil', 'campuses', EditorSearchDataCtrl]);
 
     editorModule.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
       $stateProvider

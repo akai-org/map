@@ -3,11 +3,12 @@ define([], function() {
 
   var SearchDataUtil = (function() {
 
-    function SearchDataUtil(resourceService) {
+    function SearchDataUtil(resourceService, campuses) {
       if (this instanceof SearchDataUtil) {
         this.resourceService = resourceService;
+        this.campuses = campuses;
       } else {
-        return new SearchDataUtil(resourceService);
+        return new SearchDataUtil(resourceService, campuses);
       }
     }
 
@@ -17,6 +18,7 @@ define([], function() {
 
     SearchDataUtil.prototype.convertBaseSearchDataToFormData = function(baseSearchData) {
       var data = this.convertAliasesToString(baseSearchData);
+      data = this.convertCampusesToEnum(data);
       var buildings = data.filter(function(d) {
         return d.roomId == null || d.roomId == undefined;
       });
@@ -31,8 +33,8 @@ define([], function() {
         var building = {
           name: formData[i].name,
           buildingId: formData[i].buildingId,
-          campus: formData[i].campus,
-          aliases: formData[i].aliasesString.split(',')
+          campus: formData[i].campus.shortName,
+          aliases: this.convertAliasesStringToAliases(formData[i].aliasesString)
         }
         data.push(building);
         for (var j=0; j<formData[i].rooms.length; j++) {
@@ -40,14 +42,21 @@ define([], function() {
           var _room = {
             name: room.name,
             buildingId: room.buildingId,
-            campus: room.campus,
+            campus: room.campus.shortName,
             roomId: room.roomId,
-            aliases: room.aliasesString.split(',')
+            aliases: this.convertAliasesStringToAliases(room.aliasesString)
           };
           data.push(_room);
         }
       }
       return data;
+    };
+
+    SearchDataUtil.prototype.convertAliasesStringToAliases = function(aliasesString) {
+      return aliasesString.split(",").map(function(s) {
+        var x = new String(s);
+        return x.trim();
+      });
     };
 
     SearchDataUtil.prototype.prepareRooms = function(buildings, baseSearchData) {
@@ -66,6 +75,13 @@ define([], function() {
         b.aliasesString = b.aliases.join(', ');
         return b;
       });
+    };
+
+    SearchDataUtil.prototype.convertCampusesToEnum = function(buildings) {
+      return buildings.map(angular.bind(this, function(b) {
+        b.campus = this.campuses[b.campus];
+        return b;
+      }));
     };
 
     return SearchDataUtil;
