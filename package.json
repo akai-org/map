@@ -35,5 +35,6 @@
   "main": "index.js",
   "dependencies": {
     "bootstrap": "3.3.7"
-  }
+  },
+  "background": "#252F3B"
 }
